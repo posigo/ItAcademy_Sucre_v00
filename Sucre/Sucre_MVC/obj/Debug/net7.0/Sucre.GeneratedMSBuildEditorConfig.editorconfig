@@ -1,0 +1,191 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Sucre
+build_property.RootNamespace = Sucre
+build_property.ProjectDir = C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/AccessDeniedPath.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxBY2Nlc3NEZW5pZWRQYXRoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/AppUserLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxBcHBVc2VyTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/AppUserRegister.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxBcHBVc2VyUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/DeleteAppRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxEZWxldGVBcHBSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/DeleteAppUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxEZWxldGVBcHBVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/IndexCurUser - Копировать.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxJbmRleEN1clVzZXIgLSDQmtC+0L/QuNGA0L7QstCw0YLRjC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/ListAppRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxMaXN0QXBwUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/ListAppRoleUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxMaXN0QXBwUm9sZVVzZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/ListAppUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxMaXN0QXBwVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/ListAppUserRoles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxMaXN0QXBwVXNlclJvbGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/ProfileCurUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxQcm9maWxlQ3VyVXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/UpsertAppRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVcHNlcnRBcHBSb2xlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/AppUser/UpsertAppUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVcHNlcnRBcHBVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/CannalePointsIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcQ2FubmFsZVBvaW50c0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/DeleteAsPaz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcRGVsZXRlQXNQYXouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/IndexAsPaz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcSW5kZXhBc1Bhei5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Canal/UpsertAsPaz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FuYWxcVXBzZXJ0QXNQYXouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Cex/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2V4XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Cex/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2V4XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Cex/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2V4XFVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Energy/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Energy/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Energy/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5lcmd5XFVwc2VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Home/MethodForActionFilter.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZXRob2RGb3JBY3Rpb25GaWx0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/ParameterType/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyVHlwZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/ParameterType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyVHlwZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/ParameterType/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFyYW1ldGVyVHlwZVxVcHNlcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Point/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Point/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Point/PointCannalesIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRcUG9pbnRDYW5uYWxlc0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Point/Upsert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9pbnRcVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Shared/_DisplayHeaderIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EaXNwbGF5SGVhZGVySW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Shared/_DisplayOfEmptyList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EaXNwbGF5T2ZFbXB0eUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/ItAcademy/Sukre-v00/Sucre/Sucre/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-jt48wwpi7h

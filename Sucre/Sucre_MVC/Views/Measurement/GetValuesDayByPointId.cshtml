@@ -1,0 +1,95 @@
+﻿@model Sucre_Core.DTOs.ValuesDayByIdPointDto 
+@*Sucre_MVC.Controllers.MeasurementController.ValuesDayByIdPointM*@
+@* @model IEnumerable<Sucre_Models.PointM> *@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Value day - values";
+    ViewData["DisplayOfEmptyList"] = "The list of channales is empty!";
+    ViewData["DisplayOfEmptyListValue"] = "The values channales now point is empty!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-8 col-sm-10 col-md-8 col-lg-6">
+            <h2 class="text-primary">@Model.Heading</h2>
+        </div>
+        <div class="col-4 col-sm-2 col-md-4 col-lg-6 text-end">
+            <a asp-controller="Point" asp-action="Upsert" asp-route-Id="@Model.ValuesDayPoint.PointTableDto.PointDto.Id" 
+                class="btn btn-primary-custom">
+                Go to property
+            </a>
+        </div>
+    </div>
+
+    @if (Model.Columns>0)
+    {
+        <div class="m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead>
+                    <tr>
+                        @foreach (var th in Model.ColumnsName)
+                        {
+                            <th valign="middle">
+                                <div class="row">
+                                    <div class="col-9">
+                                        @foreach (var ht in th.Item2)
+                                        {
+                                            @ht <br />
+                                        }
+                                    </div>
+                                    @if (th.Item1 != 0)
+                                    {
+                                        <div class="col-2 text-start">
+                                            <a asp-controller="Canal" asp-action="Upsert" asp-route-Id="@th.Item1"
+                                               class="btn-link text-black text-start">>></a>
+                                        </div>
+                                    }
+                                    <div class="col-1"></div>
+                                </div>
+                                
+                            </th>
+                        }                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Rows>0)
+                    {
+                        @foreach (var i in Model.TableDict)
+                        {
+                            <tr>
+                                <td width="5%">@i.Key.Date.ToShortDateString()</td>
+
+                                @for( var j = 0; j<i.Value.Length; j++)
+                                {
+                                    <td width="">@i.Value[j]</td>
+                                }
+                            </tr>
+                        }
+                    }  
+                    else
+                    {
+                        <tr class="m-0 p-0 table-danger">
+                            <td colspan="@Model.Columns" class="alert alert-danger text-danger text-center h2">
+                                The values channales now point is empty!
+                            @*     <div class="row row-cols-auto " role="alert"> *@
+                                    @* <p class="alert alert-danger text-danger h4">The values channales now point is empty!</p> *@
+                            @*     </div> *@
+                            </td>
+                        </tr>
+                        
+                        @* await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyListValue"]); *@
+                    }
+                </tbody>
+            </table>
+        </div>        
+    }   
+    else
+    {
+        @* <div class="row row-cols-auto alert alert-danger" role="alert">
+            <p class="text-danger h4">The list of metering point is empty!</p>
+        </div> *@
+        @*<partial name="_DisplayOfEmptyList" view-data="ViewData" />*@
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+
+    }
+</div>

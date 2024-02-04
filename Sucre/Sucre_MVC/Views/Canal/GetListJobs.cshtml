@@ -1,0 +1,88 @@
+﻿@* @model ICollection<CanalTableM> *@
+@* @model ICollection<CanalM> *@
+@model List<Sucre_MVC.Models.JobStatus>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Jobs - Index";
+    ViewData["DisplayOfEmptyList"] = "Jobs list is empty!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col col-sm-5 col-md-4 col-lg-4">
+            <h2 class="text-primary">Jobs List</h2>
+        </div>
+        @* <div class="col col-sm-5 col-md-4 col-lg-6 text-end">
+            <a asp-controller="Canal" asp-action="IndexAsPaz" class="btn btn-primary-custom w-auto">
+                Go to the list of AsPaz channels
+            </a>
+        </div>
+        <div class="col col-sm-2 col-md-4 col-lg-2 text-end">
+            <a asp-controller="Canal" asp-action="Upsert" class="btn btn-primary-custom w-auto">
+                Add channel
+            </a>            
+        </div> *@
+    </div>
+
+    @if (Model.Count()>0)
+    {
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead valign="middle">
+                    <tr>
+                        <th>Job</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="40%">@obj.JobId</td>
+                            <td width="40%">
+                                @if (obj.Ein)
+                                {
+                                    <span>Ein</span>
+                                }
+                                else
+                                {
+                                    <span>Stop</span>
+                                }
+                            </td>
+                            <td class="text-center w-auto">
+                                @if (obj.Ein)
+                                {
+                                    <a asp-controller="Canal" asp-action="Jobsrun"
+                                       asp-route-id="@obj.JobId"
+                                       asp-route-ein="@obj.Ein" class="btn btn-primary-custom m-auto">
+                                        Go to Stop
+                                    </a>
+                                }
+                                else
+                                {
+                                    <a asp-controller="Canal" asp-action="Jobsrun"
+                                       asp-route-id="@obj.JobId"
+                                       asp-route-ein="@obj.Ein" class="btn btn-primary-custom m-auto">
+                                        Go to Ein
+                                    </a>
+                                }
+                            </td>
+                        </tr>
+                       
+
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    }   
+    else
+    {
+       
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+     
+    }
+</div>

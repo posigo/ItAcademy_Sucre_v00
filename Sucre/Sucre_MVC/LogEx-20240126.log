@@ -1,0 +1,250 @@
+2024-01-26 11:36:15.643 +03:00 [INF] *->------Program Main start 2024-01-26 11:36:15 ------
+2024-01-26 11:36:17.709 +03:00 [INF] *->------Application Run------
+2024-01-26 11:36:18.488 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2024-01-26 11:36:18.751 +03:00 [INF] *->App create succesfully (Microsoft.AspNetCore.Builder.WebApplication)
+2024-01-26 11:36:18.891 +03:00 [INF] Start installing Hangfire SQL objects...
+2024-01-26 11:36:20.176 +03:00 [INF] Hangfire SQL objects installed.
+2024-01-26 11:36:20.572 +03:00 [INF] *->App run (Development)
+2024-01-26 11:36:20.583 +03:00 [INF] User profile is available. Using 'C:\Users\posig\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 11:36:20.908 +03:00 [INF] Now listening on: https://localhost:7291
+2024-01-26 11:36:20.909 +03:00 [INF] Now listening on: http://localhost:5202
+2024-01-26 11:36:20.920 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@Sucre-Hangfire'
+2024-01-26 11:36:20.921 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-26 11:36:20.922 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-26 11:36:20.990 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 11:36:20.992 +03:00 [INF] Hosting environment: Development
+2024-01-26 11:36:20.993 +03:00 [INF] Content root path: C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC
+2024-01-26 11:36:21.143 +03:00 [INF] Server laptop-630v3bbb:50008:7ef2fc4b successfully announced in 153,1245 ms
+2024-01-26 11:36:21.148 +03:00 [INF] Server laptop-630v3bbb:50008:7ef2fc4b is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-26 11:36:21.195 +03:00 [INF] 3 servers were removed due to timeout
+2024-01-26 11:36:21.236 +03:00 [INF] Server laptop-630v3bbb:50008:7ef2fc4b all the dispatchers started
+2024-01-26 11:36:22.139 +03:00 [WRN] No store type was specified for the decimal property 'A_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.146 +03:00 [WRN] No store type was specified for the decimal property 'A_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.147 +03:00 [WRN] No store type was specified for the decimal property 'High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.155 +03:00 [WRN] No store type was specified for the decimal property 'Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.155 +03:00 [WRN] No store type was specified for the decimal property 'W_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.156 +03:00 [WRN] No store type was specified for the decimal property 'W_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.157 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueDay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.158 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueHour'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.159 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueMounth'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:36:22.294 +03:00 [INF] *->Use IRepository DbSucreCex-11:36
+2024-01-26 11:36:22.295 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:36:22.295 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:36:22.644 +03:00 [INF] Executed DbCommand (27ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsPazEin], [c].[Day], [c].[Description], [c].[Hour], [c].[Month], [c].[Name], [c].[ParameterTypeId], [c].[Reader], [c].[SourceType], [p].[Id], [p].[Mnemo], [p].[Name], [p].[UnitMeas], [v].[Id], [v].[Date], [v].[Hour], [v].[Changed], [v].[Value]
+FROM [Canals] AS [c]
+INNER JOIN [ParameterTypes] AS [p] ON [c].[ParameterTypeId] = [p].[Id]
+LEFT JOIN [ValuesHour] AS [v] ON [c].[Id] = [v].[Id]
+WHERE [c].[Reader] = CAST(1 AS bit) AND [c].[SourceType] = 0
+ORDER BY [c].[Id], [p].[Id], [v].[Id], [v].[Date]
+2024-01-26 11:36:22.767 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2024-01-26 11:36:22.798 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[AsPazEin], [c].[Day], [c].[Description], [c].[Hour], [c].[Month], [c].[Name], [c].[ParameterTypeId], [c].[Reader], [c].[SourceType], [p].[Id], [p].[Mnemo], [p].[Name], [p].[UnitMeas], [v].[Id], [v].[Date], [v].[Hour], [v].[Changed], [v].[Value], [t].[CanalsId], [t].[PointsId], [t].[Id], [t].[CexId], [t].[Description], [t].[EnergyId], [t].[Name], [t].[ServiceStaff], [t].[Id0], [t].[EnergyName]
+FROM [Canals] AS [c]
+INNER JOIN [ParameterTypes] AS [p] ON [c].[ParameterTypeId] = [p].[Id]
+LEFT JOIN [ValuesHour] AS [v] ON [c].[Id] = [v].[Id]
+LEFT JOIN (
+    SELECT [c0].[CanalsId], [c0].[PointsId], [p0].[Id], [p0].[CexId], [p0].[Description], [p0].[EnergyId], [p0].[Name], [p0].[ServiceStaff], [e].[Id] AS [Id0], [e].[EnergyName]
+    FROM [CanalPoint] AS [c0]
+    INNER JOIN [Points] AS [p0] ON [c0].[PointsId] = [p0].[Id]
+    INNER JOIN [Enegies] AS [e] ON [p0].[EnergyId] = [e].[Id]
+) AS [t] ON [c].[Id] = [t].[CanalsId]
+WHERE [c].[Reader] = CAST(1 AS bit) AND [c].[SourceType] = 0
+ORDER BY [c].[Id], [p].[Id], [v].[Id], [v].[Date], [v].[Hour], [t].[CanalsId], [t].[PointsId], [t].[Id]
+2024-01-26 11:36:25.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - null null
+2024-01-26 11:36:25.368 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2024-01-26 11:36:25.378 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2024-01-26 11:36:25.386 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2024-01-26 11:36:25.392 +03:00 [INF] *->Run action Home-Index
+2024-01-26 11:36:25.392 +03:00 [INF] *->Run action Home-Index
+2024-01-26 11:36:25.402 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-26 11:36:25.522 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:36:25.553 +03:00 [INF] Executed ViewResult - view Index executed in 157.9438ms.
+2024-01-26 11:36:25.558 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 173.5507ms
+2024-01-26 11:36:25.559 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2024-01-26 11:36:25.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - 200 null text/html; charset=utf-8 336.7974ms
+2024-01-26 11:36:25.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:36:25.639 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:36:25.644 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 4.59ms
+2024-01-26 11:36:25.730 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 90.8222ms
+2024-01-26 11:36:25.859 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:36:25.883 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:36:25.884 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 25.8282ms
+2024-01-26 11:38:01.707 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/DeviceTag/GetDevices - null null
+2024-01-26 11:38:01.723 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC)'
+2024-01-26 11:38:01.728 +03:00 [INF] Route matched with {action = "GetDevices", controller = "DeviceTag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDevices() on controller Sucre_MVC.Controllers.DeviceTagController (Sucre_MVC).
+2024-01-26 11:38:01.764 +03:00 [INF] *->Use IRepository DbSucreCex-11:38
+2024-01-26 11:38:01.765 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:38:01.765 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:38:01.786 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Connection], [d].[Name]
+FROM [Devices] AS [d]
+2024-01-26 11:38:01.793 +03:00 [INF] Executing ViewResult, running view GetDevices.
+2024-01-26 11:38:01.833 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:38:01.839 +03:00 [INF] Executed ViewResult - view GetDevices executed in 47.0309ms.
+2024-01-26 11:38:01.840 +03:00 [INF] Executed action Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC) in 107.6567ms
+2024-01-26 11:38:01.840 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC)'
+2024-01-26 11:38:01.843 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/DeviceTag/GetDevices - 200 null text/html; charset=utf-8 136.4723ms
+2024-01-26 11:38:01.845 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:38:01.846 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:38:01.847 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 2.4121ms
+2024-01-26 11:38:01.858 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.8933ms
+2024-01-26 11:38:01.870 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:38:01.877 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:38:01.878 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 8.4424ms
+2024-01-26 11:38:04.148 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/DeviceTag/Upsert - null null
+2024-01-26 11:38:04.157 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.DeviceTagController.Upsert (Sucre_MVC)'
+2024-01-26 11:38:04.164 +03:00 [INF] Route matched with {action = "Upsert", controller = "DeviceTag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upsert(System.Nullable`1[System.Int32]) on controller Sucre_MVC.Controllers.DeviceTagController (Sucre_MVC).
+2024-01-26 11:38:04.175 +03:00 [INF] *->Use IRepository DbSucreCex-11:38
+2024-01-26 11:38:04.176 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:38:04.176 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:38:04.193 +03:00 [INF] Executing ViewResult, running view Upsert.
+2024-01-26 11:38:04.241 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:38:04.252 +03:00 [INF] Executed ViewResult - view Upsert executed in 60.2918ms.
+2024-01-26 11:38:04.253 +03:00 [INF] Executed action Sucre_MVC.Controllers.DeviceTagController.Upsert (Sucre_MVC) in 84.9922ms
+2024-01-26 11:38:04.253 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.DeviceTagController.Upsert (Sucre_MVC)'
+2024-01-26 11:38:04.255 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/DeviceTag/Upsert - 200 null text/html; charset=utf-8 107.127ms
+2024-01-26 11:38:04.264 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:38:04.264 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:38:04.268 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.8095ms
+2024-01-26 11:38:04.280 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.5248ms
+2024-01-26 11:38:04.289 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:38:04.293 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:38:04.294 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 4.7919ms
+2024-01-26 11:39:28.390 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7291/DeviceTag/Upsert - multipart/form-data; boundary=----WebKitFormBoundarysR4hDCWPhytHvtTr 572
+2024-01-26 11:39:28.398 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.DeviceTagController.Upsert (Sucre_MVC)'
+2024-01-26 11:39:28.404 +03:00 [INF] Route matched with {action = "Upsert", controller = "DeviceTag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upsert(Sucre_Core.DTOs.DeviceDto) on controller Sucre_MVC.Controllers.DeviceTagController (Sucre_MVC).
+2024-01-26 11:39:28.427 +03:00 [INF] *->Use IRepository DbSucreCex-11:39
+2024-01-26 11:39:28.428 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:39:28.428 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:39:28.554 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Devices] ([Connection], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2024-01-26 11:39:28.584 +03:00 [INF] Executing RedirectResult, redirecting to /DeviceTag/GetDevices.
+2024-01-26 11:39:28.585 +03:00 [INF] Executed action Sucre_MVC.Controllers.DeviceTagController.Upsert (Sucre_MVC) in 176.4109ms
+2024-01-26 11:39:28.586 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.DeviceTagController.Upsert (Sucre_MVC)'
+2024-01-26 11:39:28.588 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7291/DeviceTag/Upsert - 302 0 null 198.6281ms
+2024-01-26 11:39:28.589 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/DeviceTag/GetDevices - null null
+2024-01-26 11:39:28.595 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC)'
+2024-01-26 11:39:28.596 +03:00 [INF] Route matched with {action = "GetDevices", controller = "DeviceTag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDevices() on controller Sucre_MVC.Controllers.DeviceTagController (Sucre_MVC).
+2024-01-26 11:39:28.601 +03:00 [INF] *->Use IRepository DbSucreCex-11:39
+2024-01-26 11:39:28.602 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:39:28.602 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:39:28.610 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Connection], [d].[Name]
+FROM [Devices] AS [d]
+2024-01-26 11:39:28.615 +03:00 [INF] Executing ViewResult, running view GetDevices.
+2024-01-26 11:39:28.687 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:39:28.691 +03:00 [INF] Executed ViewResult - view GetDevices executed in 76.5222ms.
+2024-01-26 11:39:28.698 +03:00 [INF] Executed action Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC) in 98.0596ms
+2024-01-26 11:39:28.700 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC)'
+2024-01-26 11:39:28.700 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:39:28.700 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:39:28.713 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 12.9107ms
+2024-01-26 11:39:28.746 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/DeviceTag/GetDevices - 200 null text/html; charset=utf-8 157.1821ms
+2024-01-26 11:39:28.747 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 47.1528ms
+2024-01-26 11:39:28.760 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:39:28.767 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:39:28.768 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 7.1948ms
+2024-01-26 11:41:17.345 +03:00 [INF] *->------Program Main start 2024-01-26 11:41:17 ------
+2024-01-26 11:41:17.687 +03:00 [INF] *->------Application Run------
+2024-01-26 11:41:17.842 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2024-01-26 11:41:17.919 +03:00 [INF] *->App create succesfully (Microsoft.AspNetCore.Builder.WebApplication)
+2024-01-26 11:41:17.958 +03:00 [INF] Start installing Hangfire SQL objects...
+2024-01-26 11:41:18.394 +03:00 [INF] Hangfire SQL objects installed.
+2024-01-26 11:41:18.587 +03:00 [INF] *->App run (Development)
+2024-01-26 11:41:18.601 +03:00 [INF] User profile is available. Using 'C:\Users\posig\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-01-26 11:41:18.804 +03:00 [INF] Now listening on: https://localhost:7291
+2024-01-26 11:41:18.805 +03:00 [INF] Now listening on: http://localhost:5202
+2024-01-26 11:41:18.810 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: .@Sucre-Hangfire'
+2024-01-26 11:41:18.811 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2024-01-26 11:41:18.811 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2024-01-26 11:41:18.824 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-01-26 11:41:18.825 +03:00 [INF] Hosting environment: Development
+2024-01-26 11:41:18.825 +03:00 [INF] Content root path: C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC
+2024-01-26 11:41:18.929 +03:00 [INF] Server laptop-630v3bbb:48616:798ce064 successfully announced in 103,935 ms
+2024-01-26 11:41:18.934 +03:00 [INF] Server laptop-630v3bbb:48616:798ce064 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, SqlServerHeartbeatProcess, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2024-01-26 11:41:19.030 +03:00 [INF] Server laptop-630v3bbb:48616:798ce064 all the dispatchers started
+2024-01-26 11:41:19.951 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - null null
+2024-01-26 11:41:20.123 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2024-01-26 11:41:20.136 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2024-01-26 11:41:20.145 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2024-01-26 11:41:20.244 +03:00 [INF] *->Run action Home-Index
+2024-01-26 11:41:20.245 +03:00 [INF] *->Run action Home-Index
+2024-01-26 11:41:20.252 +03:00 [INF] Executing ViewResult, running view Index.
+2024-01-26 11:41:20.343 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:41:20.371 +03:00 [INF] Executed ViewResult - view Index executed in 123.5426ms.
+2024-01-26 11:41:20.375 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 230.6238ms
+2024-01-26 11:41:20.376 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2024-01-26 11:41:20.381 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - 200 null text/html; charset=utf-8 433.5968ms
+2024-01-26 11:41:22.670 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:41:22.670 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:41:22.689 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 18.4277ms
+2024-01-26 11:41:22.715 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.4246ms
+2024-01-26 11:41:22.753 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:41:22.769 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:41:22.770 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 17.78ms
+2024-01-26 11:41:26.775 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/DeviceTag/GetTags - null null
+2024-01-26 11:41:26.785 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetTags (Sucre_MVC)'
+2024-01-26 11:41:26.790 +03:00 [INF] Route matched with {action = "GetTags", controller = "DeviceTag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetTags() on controller Sucre_MVC.Controllers.DeviceTagController (Sucre_MVC).
+2024-01-26 11:41:27.316 +03:00 [WRN] No store type was specified for the decimal property 'A_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.317 +03:00 [WRN] No store type was specified for the decimal property 'A_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.317 +03:00 [WRN] No store type was specified for the decimal property 'High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.318 +03:00 [WRN] No store type was specified for the decimal property 'Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.319 +03:00 [WRN] No store type was specified for the decimal property 'W_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.320 +03:00 [WRN] No store type was specified for the decimal property 'W_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.320 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueDay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.321 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueHour'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.321 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueMounth'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2024-01-26 11:41:27.419 +03:00 [INF] *->Use IRepository DbSucreCex-11:41
+2024-01-26 11:41:27.420 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:41:27.421 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:41:27.644 +03:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[DeviceId], [d].[Enviroment], [d].[ParameterCode]
+FROM [DeviceTags] AS [d]
+2024-01-26 11:41:27.662 +03:00 [INF] Executing ViewResult, running view GetTags.
+2024-01-26 11:41:27.699 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:41:27.705 +03:00 [INF] Executed ViewResult - view GetTags executed in 43.5975ms.
+2024-01-26 11:41:27.706 +03:00 [INF] Executed action Sucre_MVC.Controllers.DeviceTagController.GetTags (Sucre_MVC) in 911.8906ms
+2024-01-26 11:41:27.706 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetTags (Sucre_MVC)'
+2024-01-26 11:41:27.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:41:27.710 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:41:27.712 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 1.9319ms
+2024-01-26 11:41:27.716 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/DeviceTag/GetTags - 200 null text/html; charset=utf-8 941.183ms
+2024-01-26 11:41:27.727 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.8016ms
+2024-01-26 11:41:27.733 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:41:27.737 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:41:27.738 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 5.285ms
+2024-01-26 11:41:36.302 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/DeviceTag/GetDevices - null null
+2024-01-26 11:41:36.310 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC)'
+2024-01-26 11:41:36.312 +03:00 [INF] Route matched with {action = "GetDevices", controller = "DeviceTag"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetDevices() on controller Sucre_MVC.Controllers.DeviceTagController (Sucre_MVC).
+2024-01-26 11:41:36.349 +03:00 [INF] *->Use IRepository DbSucreCex-11:41
+2024-01-26 11:41:36.350 +03:00 [INF] SucreUnitOfWork use
+2024-01-26 11:41:36.350 +03:00 [INF] *->SucreUnitOfWork use
+2024-01-26 11:41:36.365 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Id], [d].[Connection], [d].[Name]
+FROM [Devices] AS [d]
+2024-01-26 11:41:36.402 +03:00 [INF] Executing ViewResult, running view GetDevices.
+2024-01-26 11:41:36.443 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2024-01-26 11:41:36.447 +03:00 [INF] Executed ViewResult - view GetDevices executed in 46.467ms.
+2024-01-26 11:41:36.448 +03:00 [INF] Executed action Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC) in 131.1028ms
+2024-01-26 11:41:36.449 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.DeviceTagController.GetDevices (Sucre_MVC)'
+2024-01-26 11:41:36.452 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/DeviceTag/GetDevices - 200 null text/html; charset=utf-8 149.8922ms
+2024-01-26 11:41:36.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - null null
+2024-01-26 11:41:36.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - null null
+2024-01-26 11:41:36.456 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - 200 13754 application/javascript; charset=utf-8 3.4985ms
+2024-01-26 11:41:36.467 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.7197ms
+2024-01-26 11:41:36.490 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - null null
+2024-01-26 11:41:36.504 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2024-01-26 11:41:36.505 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - 200 444286 text/plain 15.715ms

@@ -1,0 +1,90 @@
+﻿@model Sucre_Models.ConsValueDayM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Select point";    
+}
+
+<div class="container">
+    <form method="post" asp-action="ValueDayPost" enctype="multipart/form-data">
+        @* <input asp-for= "PointId" hidden> *@
+        @* <input asp-for="PointId"> *@        
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">                
+                <h2 class="text-primary-custom pl-3">Select point</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.DropDownListFor(model => model.PointId, Model.PointNameSelectList,
+                                     null,
+                                     new { @class = "form-select", @id = "PointId" })
+                            @Html.LabelFor(model => model.PointId, "Choose the point", new { @for = "PointId" })
+                            @Html.ValidationMessageFor(model => model.PointId, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row">
+                            <div class="col form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.NYear, null, new { @class = "form-control", @type = "text", @id = "YearB" })
+                                @Html.LabelFor(model => model.NYear, "Enter year date", new { @for = "YearB" })
+                                @Html.ValidationMessageFor(model => model.NYear, null, new { @class = "text-danger" })
+                            </div>
+                            <div class="col form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.NMonth, null, new { @class = "form-control", @type = "text", @id = "MonthB" })
+                                @Html.LabelFor(model => model.NMonth, "Enter month date", new { @for = "MonthB" })
+                                @Html.ValidationMessageFor(model => model.NMonth, null, new { @class = "text-danger" })
+                            </div>
+                            <div class="col form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.NDay, null, new { @class = "form-control", @type = "text", @id = "DayB" })
+                                @Html.LabelFor(model => model.NDay, "Enter day date", new { @for = "DayB" })
+                                @Html.ValidationMessageFor(model => model.NDay, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.NYearE, null, new { @class = "form-control", @type = "text", @id = "YearE" })
+                                @Html.LabelFor(model => model.NYearE, "Enter yearE date", new { @for = "YearE" })
+                                @Html.ValidationMessageFor(model => model.NYearE, null, new { @class = "text-danger" })
+                            </div>
+                            <div class="col form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.NMonthE, null, new { @class = "form-control", @type = "text", @id = "MonthE" })
+                                @Html.LabelFor(model => model.NMonthE, "Enter monthE date", new { @for = "MonthE" })
+                                @Html.ValidationMessageFor(model => model.NMonthE, null, new { @class = "text-danger" })
+                            </div>
+                            <div class="col form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.NDayE, null, new { @class = "form-control", @type = "text", @id = "DayE" })
+                                @Html.LabelFor(model => model.NDayE, "Enter dayE date", new { @for = "DayE" })
+                                @Html.ValidationMessageFor(model => model.NDayE, null, new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @* <input type="submit" asp-route-list="Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                        @* <input type="submit" asp-route-list="@Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                        <input type="submit" asp-route-lst="@Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." />
+                        @* <input type="submit" asp-route-list="PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                       @*  <button type="submit" asp-route-list="@Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                    </div>
+                    <div class="col">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

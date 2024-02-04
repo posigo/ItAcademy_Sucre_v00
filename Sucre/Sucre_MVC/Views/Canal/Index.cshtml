@@ -1,0 +1,151 @@
+﻿@* @model ICollection<CanalTableM> *@
+@* @model ICollection<CanalM> *@
+@model IEnumerable<Sucre_Models.CanalM>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Canals - Index";
+    ViewData["DisplayOfEmptyList"] = "Channel list is empty!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col col-sm-5 col-md-4 col-lg-4">
+            <h2 class="text-primary">Channales List</h2>
+        </div>
+        <div class="col col-sm-5 col-md-4 col-lg-6 text-end">
+            <a asp-controller="Canal" asp-action="IndexAsPaz" class="btn btn-primary-custom w-auto">
+                Go to the list of AsPaz channels
+            </a>
+        </div>
+        <div class="col col-sm-2 col-md-4 col-lg-2 text-end">
+            <a asp-controller="Canal" asp-action="Upsert" class="btn btn-primary-custom w-auto">
+                Add channel
+            </a>            
+        </div>
+    </div>
+
+    @if (Model.Count()>0)
+    {
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead valign="middle">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Parameter Type</th>
+                        <th>In Work</th>
+                        <th>Source Type</th>
+                        <th>Use AsPaz</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="5%">@obj.Id</td>
+                            <td width="15%">@obj.Name</td>
+                            <td width="25%">@obj.Description</td>
+                            <td width="15%">@obj.ParameterTypeName</td>
+                            <td width="5%">
+                                @if (obj.Reader)
+                                {
+                                    <p class="">YES</p>
+                                }
+                                else
+                                {
+                                    <p class="">NO</p>
+                                }
+                            </td>
+                            <td width="10%">
+                                @if (obj.SourceType == 0)
+                                {
+                                    <p class="">Device</p>
+                                }
+                                @if (obj.SourceType == 1)
+                                {
+                                    <p class="">External</p>
+                                }
+                                @if (obj.SourceType == 2)
+                                {
+                                    <p class="">Manual</p>
+                                }
+                            </td>
+                            <td width="5%">
+                                @if (obj.AsPazEin)
+                                {
+                                    @* if (obj.canalM.AsPazM != null) *@
+                                    if (!obj.AsPazEmpty)
+                                    {
+                                        @* ICollection<AsPazCanalM> asPazCanalMs = new HashSet<AsPazCanalM>();
+                        AsPazCanalM asPazCanalM = new AsPazCanalM();
+                        asPazCanalM.AsPazM = obj.canalM.AsPazM;
+                        asPazCanalM.CanalId = obj.canalM.Id;
+                        asPazCanalM.CanalName = obj.canalM.Name;
+                        asPazCanalMs.Add(asPazCanalM);
+                        <a class="btn btn-primary-custom" asp-controller="Canal", asp-action="IndexAsPaz", asp-route-pazCanalMs="@asPazCanalMs">
+                        YES
+                        </a> *@
+                                        <a class="btn btn-primary-custom" asp-controller="Canal" , asp-action="IndexAsPaz" , asp-route-CanalId="@obj.Id">
+                                            YES
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-danger-custom" asp-controller="Canal" , asp-action="UpsertAsPaz" , asp-route-Id="0" , asp-route-canalId="@obj.Id" , asp-route-canalName="@obj.Name">
+                                            YES
+                                        </a>
+
+                                    }
+
+                                }
+                                else
+                                {
+                                    <p class="">NO</p>
+                                }
+                            </td>
+                            <td class="text-center w-auto">
+                                <a asp-controller="Canal" asp-action="Upsert" asp-route-Id="@obj.Id" class="btn btn-primary-custom m-auto">
+                                    Edit
+                                </a>
+                                <a asp-controller="Canal" asp-action="ChannalePointsIndex" asp-route-Id="@obj.Id" class="btn btn-success m-auto">
+                                    Points
+                                </a>
+                                <a asp-controller="Canal" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger-custom m-auto">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                        @*@if (obj.canalM.AsPazEin)
+                {
+                <tr>
+                <td colspan="7">
+                <details>
+                <summary>ffffff</summary>
+                <p>@obj.canalM.AsPazM.High</p>
+                <p>@obj.canalM.AsPazM.Low</p>
+                </details>
+                </td>
+                </tr>
+                }*@
+
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    }   
+    else
+    {
+        @* <div class="row row-cols-auto alert alert-danger" role="alert">
+            <p class="text-danger h4">Channel list is empty!</p>
+            <partial name="_DisplayOfEmptyList" view-data="ViewData" />
+        </div>     *@
+        @*<partial name="_DisplayOfEmptyList" view-data="ViewData" />*@
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+        ;
+    }
+</div>

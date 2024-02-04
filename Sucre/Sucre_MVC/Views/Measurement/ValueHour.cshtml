@@ -1,0 +1,75 @@
+﻿@model Sucre_Models.ConsValueHourM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Select point";    
+}
+
+<div class="container">
+    <form method="post" asp-action="ValueHour" enctype="multipart/form-data">
+        @* <input asp-for= "PointId" hidden> *@
+        @* <input asp-for="PointId"> *@        
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">                
+                <h2 class="text-primary-custom pl-3">Select point</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.DropDownListFor(model => model.PointId, Model.PointNameSelectList,
+                                     null,
+                                     new { @class = "form-select", @id = "PointId" })
+                            @Html.LabelFor(model => model.PointId, "Choose the point", new { @for = "PointId" })
+                            @Html.ValidationMessageFor(model => model.PointId, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.NDay, null, new { @class = "form-control", @type = "number", @id = "Nday", @min = "0", @max = "32" })
+                            @Html.LabelFor(model => model.NDay, "Day (32->day is null)", new { @for = "Nday" })
+                            @Html.ValidationMessageFor(model => model.NDay, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.NMonth, null, new { @class = "form-control", @type = "number", @id = "Nmonth", @min = "0", @max = "13" })
+                            @Html.LabelFor(model => model.NMonth, "Month (13->month is null)", new { @for = "Nmonth" })
+                            @Html.ValidationMessageFor(model => model.NMonth, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.NYear, null, new { @class = "form-control", @type = "number", @id = "Nyear", @min = "2023", @max = "2034" })
+                            @Html.LabelFor(model => model.NYear, "Year (2024->year is null)", new { @for = "Nyear" })
+                            @Html.ValidationMessageFor(model => model.NYear, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.NHour, null, new { @class = "form-control", @type = "number", @id = "Nhour", @min = "0", @max = "24" })
+                            @Html.LabelFor(model => model.NHour, "Hour (24->hour is null)", new { @for = "Nhour" })
+                            @Html.ValidationMessageFor(model => model.NHour, null, new { @class = "text-danger" })
+                        </div>
+                     </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @* <input type="submit" asp-route-list="Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                        @* <input type="submit" asp-route-list="@Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                        <input type="submit" asp-route-lst="@Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." />
+                        @* <input type="submit" asp-route-list="PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                       @*  <button type="submit" asp-route-list="@Model.PointNameSelectList" class="btn btn-success w-100" value="Go..." /> *@
+                    </div>
+                    <div class="col">
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

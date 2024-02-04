@@ -1,0 +1,48 @@
+﻿@model Sucre_Models.AppUserDelM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "AppUser - Remove";
+}
+
+<div class="container">
+    <form method="post" asp-action="DeleteAppUser" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.Id)
+        @*<input asp-for="@Model.Id" hidden>        *@
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">                
+                <h2 class="text-primary-custom pl-3">Remove App User (@Model.Id.ToString())</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.NameUser, null, new{@class="form-control", @type="text", @id="Name", @disabled="disabled"})
+                            @Html.LabelFor(model => model.NameUser, "User...", new{@for="Name"})                            
+                        </div>                        
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        <input type="submit" class="btn btn-danger w-100" value="Remove" />                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="ListAppUser" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

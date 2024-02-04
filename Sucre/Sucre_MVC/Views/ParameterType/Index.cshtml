@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ParameterTypeM>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Parameter Type - Index";
+    ViewData["DisplayOfEmptyList"] = "No parameter type list!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+            <h2 class="text-primary">List Of Parameter Types</h2>
+        </div>
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4 text-end">
+           @*  <a asp-controller="ParameterType" asp-action="Create" class="btn btn-primary">
+                Create a new parameter type
+            </a> *@
+            <a asp-controller="ParameterType" asp-action="Upsert" class="btn btn-primary-custom">
+                Create a new parameter type
+            </a>
+        </div>
+    </div>
+
+    @if (Model.Count()>0)
+    {
+        <div class="m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Параметр</th>
+                        <th>Мнемоника</th>
+                        <th>Единицы измерения</th>
+                        <th></th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="5%">@obj.Id</td>
+                            <td width="50%">@obj.Name</td>
+                            <td width="10%">@obj.Mnemo</td>
+                            <td width="15%">@obj.UnitMeas</td>
+                            <td class="text-center">
+                                <a asp-controller="ParameterType" asp-action="Upsert" asp-route-Id="@obj.Id" class="btn btn-primary-custom mx-2">
+                                    Edit
+                                </a>
+                                <a asp-controller="ParameterType" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger-custom mx-2">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>        
+    }   
+    else
+    {
+        @* <div class="alert alert-danger" role="alert">
+            <p class="text-danger h4">No parameter type list!</p>
+        </div> *@
+        @*<partial name="_DisplayOfEmptyList" view-data="ViewData" />*@
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+    }
+</div>

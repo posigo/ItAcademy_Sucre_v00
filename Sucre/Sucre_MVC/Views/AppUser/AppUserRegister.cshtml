@@ -1,0 +1,51 @@
+﻿@model Sucre_Models.AppUserRegisterM
+@{
+    ViewData["Title"] = "Application user register";
+    
+}
+
+<div class="container">
+    <h1>Register</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post" enctype="multipart/form-data" asp-controller="AppUser" asp-action="AppUserRegister">
+                <h2>Create a new user</h2><hr />
+                <input asp-for="ReturnUrl" hidden />
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <div class="row form-floating py-1">
+                    @Html.TextBoxFor(model => model.Email, null, new{@class="form-control", type="text", @id="forEmail"})
+                    @Html.LabelFor(model => model.Email, "Email", new{@for="forEmail"})
+                    @Html.ValidationMessageFor(model => model.Email, null, new{@class="text-danger"})
+                </div>
+                <div class="row form-floating py-1">
+                    <input asp-for="Password" type="password" class="form-control" id="forPassw" />
+                    <label asp-for="Password" for="forPassw"></label>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="row form-floating py-1">
+                    <input asp-for="PasswordConfirmation" type="password" class="form-control" id="forPasswConf" />
+                    <label asp-for="PasswordConfirmation" for="forPasswConf"></label>
+                    <span asp-validation-for="PasswordConfirmation" class="text-danger"></span>
+                </div>
+                <div class="row form-group py-1">
+                    <button type="submit" class="btn btn-lg btn-success w-100">
+                        Register
+                    </button>
+                    @* <input type="submit" class="btn btn-success w-50" value="Record" /> *@                            
+                </div>
+                <div class="form-group py-1">
+                    <p class="">
+                        @* <a asp-action="AppUserLogin" class="btn btn-info btn-sm w-100">User log in</a> *@
+                        <a asp-action="AppUserLogin" class="link-primary w-100">User log in?</a>
+                    </p>
+                </div>
+                
+            </form>
+        </div>
+        <div class="col-md-6 offset-2">
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

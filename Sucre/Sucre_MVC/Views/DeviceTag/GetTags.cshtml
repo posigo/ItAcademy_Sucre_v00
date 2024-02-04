@@ -1,0 +1,66 @@
+﻿@* @model List<Sucre_Core.DTOs.DeviceTagDto>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Tags - Index";
+    ViewData["DisplayOfEmptyList"] = "Tags list is empty!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col col-sm-8 col-md-10 col-lg-10">
+            <h2 class="text-primary">Devices List</h2>
+        </div>
+        <div class="col col-sm-4 col-md-2 col-lg-2 text-end">
+            <a asp-controller="DeviceTag" asp-action="UpsertTag" class="btn btn-primary-custom w-auto">
+                Add Tag
+            </a>            
+        </div>
+    </div>
+
+    @if (Model !=null && Model.Count()>0)
+    {
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead valign="middle">
+                    <tr>
+                        <th>Id</th>
+                        <th>Device</th>
+                        <th>Enviroment</th>
+                        <th>Parameter</th>
+                        <th></th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="5%">@obj.Id</td>
+                            <td width="15%">@obj.DeviceId</td>
+                            <td width="25%">@obj.Enviroment</td>
+                            <td width="25%">@obj.ParameterCode</td>
+                            <td class="text-center w-auto">
+                                <a asp-controller="DeviceTag" asp-action="Upsert" asp-route-Id="@obj.Id" class="btn btn-primary-custom m-auto">
+                                    Edit
+                                </a>
+                                <a asp-controller="Canal" asp-action="ChannalePointsIndex" asp-route-Id="@obj.Id" class="btn btn-success m-auto">
+                                    Channales
+                                </a>
+                                <a asp-controller="DeviceTag" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger-custom m-auto">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    }   
+    else
+    {
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+        ;
+    }
+</div> *@

@@ -1,0 +1,156 @@
+﻿@using Sucre_Utility
+@model Sucre_Models.AppUserM
+@{
+    Layout = "_Layout";
+    // if (TempData["FieldIsEmpty"] != null)
+    // {
+    //     <div class="alert alert-danger text-center">
+    //         @TempData["FieldIsEmpty"]
+    //     </div>
+    // }    
+    var title = "";
+    if (Model.Id == null || Model.Id == Guid.Empty)
+    {
+        ViewData["Title"] = "AppUser - Create";
+        title = "Add a new user";
+    }
+    else
+    {
+        ViewData["Title"] = "AppUser - Edit";
+        title = $"Edit user ({Model.Id.ToString()})";
+    }
+}
+
+<div class="container">
+    <form method="post" asp-action="UpsertAppUser" enctype="multipart/form-data">
+        @if (Model.Id != null && Model.Id != Guid.Empty)
+        {
+            @Html.HiddenFor(model => model.Id)
+            @* <input asp-for="@Model.Id" hidden> *@
+        }
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">@title</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.IsEdit)
+                            {
+                                @Html.TextBoxFor(model => model.Name, null, new{@class="form-control", @type="text", @id="Name"})
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.Name, null, new{@class="form-control", @type="text", @id="Name", @readonly="readonly"})
+                            }
+                            @Html.LabelFor(model => model.Name, "Enter user name", new{@for="Name"})
+                            @Html.ValidationMessageFor(model => model.Name, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.IsEdit)
+                            {
+                                @Html.TextBoxFor(model => model.Description, null, new{@class="form-control", @type="text", @id="Description"})                                
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.Description, null, new { @class = "form-control", @type = "text", @id = "Description", @readonly = "readonly" })
+                            }                            
+                            @Html.LabelFor(model => model.Description, "Enter user description", new{@for="Description"})
+                            @Html.ValidationMessageFor(model => model.Description, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.IsEdit)
+                            {
+                                @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control", @type = "email", @id = "Email" })
+                            }
+                            else
+                            {                                
+                                @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control", @type = "email", @id = "Email", @readonly = "readonly" })
+                            }
+                            @Html.LabelFor(model => model.Email, "Enter user email", new { @for = "Email" })
+                            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" })
+                        </div>
+
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.Id == null || Model.Id == Guid.Empty)
+                            {
+                                @Html.TextBoxFor(model => model.PasswordHash, null, new { @class = "form-control", @type = "text", @id = "Password" })
+                                @Html.LabelFor(model => model.PasswordHash, "Enter user password", new { @for = "Password" })
+                                @Html.ValidationMessageFor(model => model.PasswordHash, null, new { @class = "text-danger" })
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.PasswordHash, null, new { @class = "form-control", @type = "text", @id = "PasswordHash", @readonly = "readonly"})
+                                @Html.LabelFor(model => model.PasswordHash, "Enter user password", new { @for = "PasswordHash" })
+                            }
+                            @* @if (Model.IsEdit)
+                            {
+                                @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control", @type = "email", @id = "Email" })
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.Email, null, new { @class = "form-control", @type = "email", @id = "Email", @readonly = "readonly" })
+                            }
+                            @Html.LabelFor(model => model.Email, "Enter user email", new { @for = "Email" })
+                            @Html.ValidationMessageFor(model => model.Email, null, new { @class = "text-danger" }) *@
+                        </div>
+                        
+
+
+
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.IsEdit)
+                            {
+                                @Html.TextBoxFor(model => model.GroupNumber, null, new { @class = "form-control", @type = "number", @id = "GroupId" })
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.GroupNumber, null, new { @class = "form-control", @type = "number", @id = "GroupId", @readonly = "readonly" })
+                            }
+                            @Html.LabelFor(model => model.GroupNumber, "Enter user id group", new { @for = "GroupId" })
+                            @Html.ValidationMessageFor(model => model.GroupNumber, null, new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @if (Model.Id != null && Model.Id != Guid.Empty)
+                        {
+                            if (Model.IsEdit)
+                            {
+                                <input type="submit" class="btn btn-success w-100" value="Update" />
+                            }
+                            else
+                            {
+                                <input type="submit" class="btn btn-success w-100" value="Update" disabled="disabled" />
+                            }
+                            @* var qw = User.Claims.FirstOrDefault(i => i.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role").Value.ToString(); *@                            
+                        }
+                        else
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Create" />    
+                        }                        
+                    </div>
+                    <div class="col">
+                        <a asp-controller="AppUser" asp-action="ListAppUser" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

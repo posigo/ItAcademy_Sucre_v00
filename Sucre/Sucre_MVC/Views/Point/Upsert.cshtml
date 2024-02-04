@@ -1,0 +1,146 @@
+﻿@model Sucre_Models.PointUpsertM
+@{
+    Layout = "_Layout";
+    var title = "";
+    if (Model.PointM.Id == 0)
+    {
+        ViewData["Title"] = "Point - Create";
+        title = "Adding A Metering Point";
+    }
+    else
+    {
+        ViewData["Title"] = "Point - Edit";
+        title = $"Edit A Metering Point ({Model.PointM.Id.ToString()})";
+    }
+}
+
+<div class="container">
+    <form method="post" asp-action="Upsert" enctype="multipart/form-data">
+        @if (Model.PointM.Id !=0)
+        {
+            <input asp-for="@Model.PointM.Id" hidden>
+        }
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">                
+                <h2 class="text-primary-custom pl-3">@title</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.PointM.Name,null, new{@class="form-control", @type="text", @id="Name"})
+                            @* <input asp-for="EnergyName" type="text" class="form-control" id="EnegyName"/> *@
+                            @Html.LabelFor(model => model.PointM.Name, "Enter the name of the metering point", new{@for="Name"})
+                            @* <label asp-for="EnergyName" for="EnergyName">Type of energy environment</label> *@
+                            @Html.ValidationMessageFor(model => model.PointM.Name, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.PointM.Description, null, new{@class="form-control", @type="text", @id="Description"})                            
+                            @Html.LabelFor(model => model.PointM.Description, "Enter a description of the metering point", new{@for="Description"})
+                            @Html.ValidationMessageFor(model => model.PointM.Description, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.DropDownListFor(model => model.PointM.EnergyId, Model.EnergySelectList,
+                                                null,
+                                                new{@class="form-select", @id="EnergyId"})
+                            @Html.LabelFor(model => model.PointM.EnergyId, "Choose the type of energy", new{@for="EnergyId"})
+                            @Html.ValidationMessageFor(model => model.PointM.EnergyId, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.DropDownListFor(model => model.PointM.CexId, Model.CexSelectList,
+                                                null,
+                                                new{@class="form-select", @id="CexId"})
+                            @Html.LabelFor(model => model.PointM.EnergyId, "Select the location of the metering point", new{@for="CexId"})
+                            @Html.ValidationMessageFor(model => model.PointM.EnergyId, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.PointM.ServiceStaff, null, new{@class="form-control", @type="text", @id="ServiceStaff"})
+                            @Html.LabelFor(model => model.PointM.ServiceStaff, "Enter the service staff the metering point", new{@for="ServiceStaff"})
+                            @Html.ValidationMessageFor(model => model.PointM.ServiceStaff, null, new{@class="text-danger"})
+                        </div>
+@* 
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.Name"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="PointM.Name" class="form-control" />
+                                <span asp-validation-for="PointM.Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.Description"></label>
+                            </div>
+                            <div class="col-8">                                
+                                <textarea asp-for="PointM.Description" class="form-control"></textarea>
+                                <span asp-validation-for="PointM.Description" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.EnergyId"></label>
+                            </div>
+                            <div class="col-8">
+                                <select asp-for="PointM.EnergyId" asp-items="@Model.EnergySelectList" class="form-select">
+                                    <option disabled selected>--Select energy type--</option>
+                                </select>                                
+                                <span asp-validation-for="PointM.EnergyId" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.CexId"></label>
+                            </div>
+                            <div class="col-8">
+                                <select asp-for="PointM.CexId" asp-items="@Model.CexSelectList" class="form-select">
+                                    <option disabled selected>--Select the location of the metering point--</option>
+                                </select>
+                                <span asp-validation-for="PointM.CexId" class="text-danger"></span>
+                            </div>
+                        </div>                        
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.ServiceStaff"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="PointM.ServiceStaff" class="form-control" />
+                                <span asp-validation-for="PointM.ServiceStaff" class="text-danger"></span>
+                            </div>
+                        </div>
+ *@
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @if (Model.PointM.Id !=0)
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Update" />
+                        }
+                        else
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Create" />    
+                        }                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

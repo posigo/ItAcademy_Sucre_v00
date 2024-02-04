@@ -1,0 +1,176 @@
+2023-12-19 11:43:38.694 +03:00 [INF] *->------Program Main start 2023-12-19 11:43:38 ------
+2023-12-19 11:43:39.026 +03:00 [INF] *->------Application Run------
+2023-12-19 11:43:39.179 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2023-12-19 11:43:39.226 +03:00 [INF] *->App create succesfully (Microsoft.AspNetCore.Builder.WebApplication)
+2023-12-19 11:43:39.425 +03:00 [INF] *->App run (Development)
+2023-12-19 11:43:39.453 +03:00 [INF] User profile is available. Using 'C:\Users\19682.PC-20076\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-19 11:43:39.569 +03:00 [INF] Now listening on: https://localhost:7291
+2023-12-19 11:43:39.570 +03:00 [INF] Now listening on: http://localhost:5202
+2023-12-19 11:43:39.572 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-19 11:43:39.572 +03:00 [INF] Hosting environment: Development
+2023-12-19 11:43:39.573 +03:00 [INF] Content root path: D:\Projects\Sukre-v00\Sucre\Sucre_MVC
+2023-12-19 11:43:40.253 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - -
+2023-12-19 11:43:40.397 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-19 11:43:40.435 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-19 11:43:40.443 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-19 11:43:40.652 +03:00 [INF] *->Run action Home-Index
+2023-12-19 11:43:40.652 +03:00 [INF] *->Run action Home-Index
+2023-12-19 11:43:40.660 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-19 11:43:40.748 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-19 11:43:40.778 +03:00 [INF] Executed ViewResult - view Index executed in 122.5299ms.
+2023-12-19 11:43:40.782 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 340.7871ms
+2023-12-19 11:43:40.783 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-19 11:43:40.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - - - 200 - text/html;+charset=utf-8 537.0231ms
+2023-12-19 11:43:42.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-19 11:43:42.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/Sucre_MVC.styles.css?v=-QB-4Ci3clqSKNGWkl41LwMogTk40kzfrmMIqJfkS_c - -
+2023-12-19 11:43:42.637 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-19 11:43:42.645 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 11987 application/javascript;+charset=utf-8 8.3173ms
+2023-12-19 11:43:42.658 +03:00 [INF] The file /Sucre_MVC.styles.css was not modified
+2023-12-19 11:43:42.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/Sucre_MVC.styles.css?v=-QB-4Ci3clqSKNGWkl41LwMogTk40kzfrmMIqJfkS_c - - - 304 - text/css 22.4004ms
+2023-12-19 11:43:42.668 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.8870ms
+2023-12-19 11:43:42.739 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-19 11:43:42.750 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'D:\Projects\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-19 11:43:42.750 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 10.9157ms
+2023-12-19 11:43:46.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/AppUser/AppUserLogin - -
+2023-12-19 11:43:46.063 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLogin (Sucre_MVC)'
+2023-12-19 11:43:46.073 +03:00 [INF] Route matched with {action = "AppUserLogin", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AppUserLogin(System.String) on controller Sucre_MVC.Controllers.AppUserController (Sucre_MVC).
+2023-12-19 11:43:46.479 +03:00 [WRN] No store type was specified for the decimal property 'A_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.480 +03:00 [WRN] No store type was specified for the decimal property 'A_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.480 +03:00 [WRN] No store type was specified for the decimal property 'High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.481 +03:00 [WRN] No store type was specified for the decimal property 'Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.482 +03:00 [WRN] No store type was specified for the decimal property 'W_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.483 +03:00 [WRN] No store type was specified for the decimal property 'W_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.483 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueDay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.484 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueHour'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.485 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueMounth'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-19 11:43:46.578 +03:00 [INF] *->Use IRepository DbSucreCex-11:43
+2023-12-19 11:43:46.579 +03:00 [INF] SucreUnitOfWork use
+2023-12-19 11:43:46.580 +03:00 [INF] *->SucreUnitOfWork use
+2023-12-19 11:43:46.632 +03:00 [INF] Executing ViewResult, running view AppUserLogin.
+2023-12-19 11:43:46.679 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-19 11:43:46.690 +03:00 [INF] Executed ViewResult - view AppUserLogin executed in 59.016ms.
+2023-12-19 11:43:46.691 +03:00 [INF] Executed action Sucre_MVC.Controllers.AppUserController.AppUserLogin (Sucre_MVC) in 613.6915ms
+2023-12-19 11:43:46.692 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLogin (Sucre_MVC)'
+2023-12-19 11:43:46.696 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/AppUser/AppUserLogin - - - 200 - text/html;+charset=utf-8 642.8841ms
+2023-12-19 11:43:46.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-19 11:43:46.702 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-19 11:43:46.703 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 11987 application/javascript;+charset=utf-8 1.4462ms
+2023-12-19 11:43:46.713 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.6286ms
+2023-12-19 11:43:46.736 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-19 11:43:46.739 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'D:\Projects\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-19 11:43:46.740 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 3.7972ms
+2023-12-19 11:43:52.319 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7291/AppUser/AppUserLogin multipart/form-data;+boundary=----WebKitFormBoundaryEwgsE2vJpLXf7MEF 615
+2023-12-19 11:43:52.329 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLoginPost (Sucre_MVC)'
+2023-12-19 11:43:52.333 +03:00 [INF] Route matched with {action = "AppUserLogin", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AppUserLoginPost(Sucre_Models.AppUserLoginM) on controller Sucre_MVC.Controllers.AppUserController (Sucre_MVC).
+2023-12-19 11:43:52.373 +03:00 [INF] *->Use IRepository DbSucreCex-11:43
+2023-12-19 11:43:52.374 +03:00 [INF] SucreUnitOfWork use
+2023-12-19 11:43:52.374 +03:00 [INF] *->SucreUnitOfWork use
+2023-12-19 11:43:52.982 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [AppUsers] AS [a]
+2023-12-19 11:43:53.065 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a]
+        WHERE [a].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-12-19 11:43:53.081 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__passwordHash_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a]
+        WHERE [a].[PasswordHash] = @__passwordHash_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-12-19 11:43:53.212 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Description], [t].[Email], [t].[GroupNumber], [t].[Name], [t].[PasswordHash], [t0].[Id], [t0].[Name], [t0].[Value], [t0].[AppRolesId], [t0].[AppUsersId]
+FROM (
+    SELECT TOP(1) [a].[Id], [a].[Description], [a].[Email], [a].[GroupNumber], [a].[Name], [a].[PasswordHash]
+    FROM [AppUsers] AS [a]
+    WHERE [a].[Email] = @__email_0
+) AS [t]
+LEFT JOIN (
+    SELECT [a1].[Id], [a1].[Name], [a1].[Value], [a0].[AppRolesId], [a0].[AppUsersId]
+    FROM [AppRoleAppUser] AS [a0]
+    INNER JOIN [AppRoles] AS [a1] ON [a0].[AppRolesId] = [a1].[Id]
+) AS [t0] ON [t].[Id] = [t0].[AppUsersId]
+ORDER BY [t].[Id], [t0].[AppRolesId], [t0].[AppUsersId]
+2023-12-19 11:43:53.228 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-12-19 11:43:53.233 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2023-12-19 11:43:53.234 +03:00 [INF] Executed action Sucre_MVC.Controllers.AppUserController.AppUserLoginPost (Sucre_MVC) in 895.9178ms
+2023-12-19 11:43:53.234 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLoginPost (Sucre_MVC)'
+2023-12-19 11:43:53.236 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - -
+2023-12-19 11:43:53.238 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7291/AppUser/AppUserLogin multipart/form-data;+boundary=----WebKitFormBoundaryEwgsE2vJpLXf7MEF 615 - 302 0 - 919.3409ms
+2023-12-19 11:43:53.243 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-19 11:43:53.244 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-19 11:43:53.248 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-19 11:43:53.250 +03:00 [INF] *->Run action Home-Index
+2023-12-19 11:43:53.251 +03:00 [INF] *->Run action Home-Index
+2023-12-19 11:43:53.252 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-19 11:43:53.283 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-19 11:43:53.288 +03:00 [INF] Executed ViewResult - view Index executed in 36.8377ms.
+2023-12-19 11:43:53.289 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 41.2396ms
+2023-12-19 11:43:53.290 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-19 11:43:53.292 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - - - 200 - text/html;+charset=utf-8 55.5421ms
+2023-12-19 11:43:53.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-19 11:43:53.293 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-19 11:43:53.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 11987 application/javascript;+charset=utf-8 1.5101ms
+2023-12-19 11:43:53.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.5641ms
+2023-12-19 11:43:53.311 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-19 11:43:53.313 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'D:\Projects\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-19 11:43:53.314 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 3.1469ms
+2023-12-19 11:44:02.005 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/Energy - -
+2023-12-19 11:44:02.016 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.EnergyController.Index (Sucre_MVC)'
+2023-12-19 11:44:02.018 +03:00 [INF] Route matched with {action = "Index", controller = "Energy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Sucre_MVC.Controllers.EnergyController (Sucre_MVC).
+2023-12-19 11:44:02.023 +03:00 [INF] *->FILTER_TEST_RESOURCE...SimpleAsync
+2023-12-19 11:44:02.033 +03:00 [INF] *->Use IRepository DbSucreCex-11:44
+2023-12-19 11:44:02.033 +03:00 [INF] SucreUnitOfWork use
+2023-12-19 11:44:02.033 +03:00 [INF] *->SucreUnitOfWork use
+2023-12-19 11:44:02.052 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[EnergyName]
+FROM [Enegies] AS [e]
+2023-12-19 11:44:02.086 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-19 11:44:02.147 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-19 11:44:02.152 +03:00 [INF] Executed ViewResult - view Index executed in 66.2756ms.
+2023-12-19 11:44:02.152 +03:00 [INF] Executed action Sucre_MVC.Controllers.EnergyController.Index (Sucre_MVC) in 129.5722ms
+2023-12-19 11:44:02.153 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.EnergyController.Index (Sucre_MVC)'
+2023-12-19 11:44:02.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-19 11:44:02.156 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-19 11:44:02.156 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/Energy - - - 200 - text/html;+charset=utf-8 151.7660ms
+2023-12-19 11:44:02.157 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 11987 application/javascript;+charset=utf-8 0.8554ms
+2023-12-19 11:44:02.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.4452ms
+2023-12-19 11:44:02.172 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-19 11:44:02.175 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'D:\Projects\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-19 11:44:02.176 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 3.8448ms
+2023-12-19 11:44:54.339 +03:00 [INF] *->------Program Main start 2023-12-19 11:44:54 ------
+2023-12-19 11:44:54.635 +03:00 [INF] *->------Application Run------
+2023-12-19 11:44:54.744 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2023-12-19 11:44:54.795 +03:00 [INF] *->App create succesfully (Microsoft.AspNetCore.Builder.WebApplication)
+2023-12-19 11:44:54.956 +03:00 [INF] *->App run (Development)
+2023-12-19 11:44:54.980 +03:00 [INF] User profile is available. Using 'C:\Users\19682.PC-20076\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-19 11:44:55.087 +03:00 [INF] Now listening on: https://localhost:7291
+2023-12-19 11:44:55.088 +03:00 [INF] Now listening on: http://localhost:5202
+2023-12-19 11:44:55.089 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-19 11:44:55.090 +03:00 [INF] Hosting environment: Development
+2023-12-19 11:44:55.090 +03:00 [INF] Content root path: D:\Projects\Sukre-v00\Sucre\Sucre_MVC
+2023-12-19 11:44:58.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - -
+2023-12-19 11:44:58.651 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-19 11:44:58.669 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-19 11:44:58.677 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-19 11:44:58.775 +03:00 [INF] *->Run action Home-Index
+2023-12-19 11:44:58.776 +03:00 [INF] *->Run action Home-Index
+2023-12-19 11:44:58.783 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-19 11:44:58.872 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-19 11:44:58.901 +03:00 [INF] Executed ViewResult - view Index executed in 122.668ms.
+2023-12-19 11:44:58.906 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 230.3723ms
+2023-12-19 11:44:58.907 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-19 11:44:58.913 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - - - 200 - text/html;+charset=utf-8 402.2461ms
+2023-12-19 11:44:58.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-19 11:44:58.938 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-19 11:44:58.945 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 11987 application/javascript;+charset=utf-8 6.9437ms
+2023-12-19 11:44:58.967 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.5599ms
+2023-12-19 11:44:59.003 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-19 11:44:59.015 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'D:\Projects\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-19 11:44:59.016 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 13.3124ms

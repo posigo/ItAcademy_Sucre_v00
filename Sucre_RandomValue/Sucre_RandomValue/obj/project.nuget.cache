@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "3W0XkpxBkHznUfY3+PzWnU4U9SSLp4yQzLYo7MfVlodEzXSNkzHSyV2ApcsbaDrKsIqB5Ta5hnmdjqv2n8qoeA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre_RandomValue\\Sucre_RandomValue\\Sucre_RandomValue.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\posig\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\posig\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\posig\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\posig\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\posig\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\posig\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

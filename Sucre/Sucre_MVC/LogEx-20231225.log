@@ -1,0 +1,700 @@
+2023-12-25 20:00:55.409 +03:00 [INF] *->------Program Main start 2023-12-25 20:00:55 ------
+2023-12-25 20:00:57.056 +03:00 [INF] *->------Application Run------
+2023-12-25 20:00:57.827 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2023-12-25 20:00:58.385 +03:00 [FTL] *->!!! FATAL ERROR. Programs-Main...fucked up
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.ICexService Lifetime: Scoped ImplementationType: Sucre_Services.CexService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.) (Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.IEnergyService Lifetime: Scoped ImplementationType: Sucre_Services.EnergyService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.ICexService Lifetime: Scoped ImplementationType: Sucre_Services.CexService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Sucre.Program.Main(String[] args) in C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\Program.cs:line 162
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.IEnergyService Lifetime: Scoped ImplementationType: Sucre_Services.EnergyService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2023-12-25 20:01:35.861 +03:00 [INF] *->------Program Main start 2023-12-25 20:01:35 ------
+2023-12-25 20:01:37.292 +03:00 [INF] *->------Application Run------
+2023-12-25 20:01:37.512 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2023-12-25 20:01:37.549 +03:00 [FTL] *->!!! FATAL ERROR. Programs-Main...fucked up
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.ICexService Lifetime: Scoped ImplementationType: Sucre_Services.CexService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.) (Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.IEnergyService Lifetime: Scoped ImplementationType: Sucre_Services.EnergyService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.ICexService Lifetime: Scoped ImplementationType: Sucre_Services.CexService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Sucre.Program.Main(String[] args) in C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\Program.cs:line 162
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.IEnergyService Lifetime: Scoped ImplementationType: Sucre_Services.EnergyService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2023-12-25 20:02:27.905 +03:00 [INF] *->------Program Main start 2023-12-25 20:02:27 ------
+2023-12-25 20:02:28.193 +03:00 [INF] *->------Application Run------
+2023-12-25 20:02:28.334 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2023-12-25 20:03:01.585 +03:00 [FTL] *->!!! FATAL ERROR. Programs-Main...fucked up
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.ICexService Lifetime: Scoped ImplementationType: Sucre_Services.CexService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.) (Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.IEnergyService Lifetime: Scoped ImplementationType: Sucre_Services.EnergyService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.ICexService Lifetime: Scoped ImplementationType: Sucre_Services.CexService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.CexService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Sucre.Program.Main(String[] args) in C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\Program.cs:line 162
+ ---> (Inner Exception #1) System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Sucre_Services.Interfaces.IEnergyService Lifetime: Scoped ImplementationType: Sucre_Services.EnergyService': Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'MediatR.IMediator' while attempting to activate 'Sucre_Services.EnergyService'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(ICollection`1 serviceDescriptors, ServiceProviderOptions options)<---
+
+2023-12-25 20:04:18.248 +03:00 [INF] *->------Program Main start 2023-12-25 20:04:18 ------
+2023-12-25 20:04:18.594 +03:00 [INF] *->------Application Run------
+2023-12-25 20:04:18.727 +03:00 [INF] *->Services register successfully (Microsoft.AspNetCore.Builder.WebApplicationBuilder)
+2023-12-25 20:04:27.036 +03:00 [INF] *->App create succesfully (Microsoft.AspNetCore.Builder.WebApplication)
+2023-12-25 20:04:28.579 +03:00 [INF] *->App run (Development)
+2023-12-25 20:04:28.712 +03:00 [INF] User profile is available. Using 'C:\Users\posig\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-25 20:04:29.146 +03:00 [INF] Now listening on: https://localhost:7291
+2023-12-25 20:04:29.147 +03:00 [INF] Now listening on: http://localhost:5202
+2023-12-25 20:04:29.149 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-25 20:04:29.149 +03:00 [INF] Hosting environment: Development
+2023-12-25 20:04:29.149 +03:00 [INF] Content root path: C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC
+2023-12-25 20:04:30.756 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - -
+2023-12-25 20:04:30.999 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-25 20:04:31.052 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-25 20:04:31.062 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-25 20:04:32.351 +03:00 [INF] *->Run action Home-Index
+2023-12-25 20:04:32.351 +03:00 [INF] *->Run action Home-Index
+2023-12-25 20:04:32.366 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 20:04:32.539 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-25 20:04:32.638 +03:00 [INF] Executed ViewResult - view Index executed in 282.1471ms.
+2023-12-25 20:04:32.643 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 1584.2172ms
+2023-12-25 20:04:32.645 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-25 20:04:32.651 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - - - 200 - text/html;+charset=utf-8 1896.5935ms
+2023-12-25 20:04:32.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/Sucre_MVC.styles.css?v=-QB-4Ci3clqSKNGWkl41LwMogTk40kzfrmMIqJfkS_c - -
+2023-12-25 20:04:32.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/lib/bootstrap532/dist/css/bootstrap.css - -
+2023-12-25 20:04:32.660 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/images/Sukred.png - -
+2023-12-25 20:04:32.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/css/site.css?v=QwHQyumfclXi_BOkA0n7TIW-tIK46tKITL6XTe6kGE8 - -
+2023-12-25 20:04:32.660 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/images/SukredIco1.png - -
+2023-12-25 20:04:32.731 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 20:04:32.732 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/lib/jquery/dist/jquery.min.js - -
+2023-12-25 20:04:32.734 +03:00 [INF] The file /images/Sukred.png was not modified
+2023-12-25 20:04:32.734 +03:00 [INF] The file /css/site.css was not modified
+2023-12-25 20:04:32.734 +03:00 [INF] The file /lib/bootstrap532/dist/css/bootstrap.css was not modified
+2023-12-25 20:04:32.734 +03:00 [INF] The file /images/SukredIco1.png was not modified
+2023-12-25 20:04:32.737 +03:00 [INF] The file /lib/jquery/dist/jquery.min.js was not modified
+2023-12-25 20:04:32.734 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js - -
+2023-12-25 20:04:32.737 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/js/site.js?v=M58ybySyr61Nt8bQ_NG0kRVfjYnofR-sxc6k6Fw6AG0 - -
+2023-12-25 20:04:32.740 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-25 20:04:32.783 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/images/Sukred.png - - - 304 - image/png 123.5535ms
+2023-12-25 20:04:32.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/css/site.css?v=QwHQyumfclXi_BOkA0n7TIW-tIK46tKITL6XTe6kGE8 - - - 304 - text/css 124.1350ms
+2023-12-25 20:04:32.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 13754 application/javascript;+charset=utf-8 52.4577ms
+2023-12-25 20:04:32.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/lib/bootstrap532/dist/css/bootstrap.css - - - 304 - text/css 124.8163ms
+2023-12-25 20:04:32.786 +03:00 [INF] Sending file. Request path: '/Sucre_MVC.styles.css'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\obj\Debug\net7.0\scopedcss\bundle\Sucre_MVC.styles.css'
+2023-12-25 20:04:32.786 +03:00 [INF] The file /lib/bootstrap532/dist/js/bootstrap.bundle.js was not modified
+2023-12-25 20:04:32.786 +03:00 [INF] The file /js/site.js was not modified
+2023-12-25 20:04:32.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/Sucre_MVC.styles.css?v=-QB-4Ci3clqSKNGWkl41LwMogTk40kzfrmMIqJfkS_c - - - 200 1126 text/css 130.1648ms
+2023-12-25 20:04:32.789 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/images/SukredIco1.png - - - 304 - image/png 129.0049ms
+2023-12-25 20:04:32.789 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/lib/jquery/dist/jquery.min.js - - - 304 - text/javascript 57.4967ms
+2023-12-25 20:04:32.797 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js - - - 304 - text/javascript 62.5609ms
+2023-12-25 20:04:32.798 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/js/site.js?v=M58ybySyr61Nt8bQ_NG0kRVfjYnofR-sxc6k6Fw6AG0 - - - 304 - text/javascript 60.4335ms
+2023-12-25 20:04:32.820 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 80.3918ms
+2023-12-25 20:04:32.929 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-25 20:04:32.956 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-25 20:04:32.958 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 28.2796ms
+2023-12-25 20:04:33.073 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/favicon.ico - -
+2023-12-25 20:04:33.073 +03:00 [INF] The file /favicon.ico was not modified
+2023-12-25 20:04:33.075 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/favicon.ico - - - 304 - image/x-icon 2.5424ms
+2023-12-25 20:04:37.132 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/AppUser/AppUserLogin - -
+2023-12-25 20:04:37.142 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLogin (Sucre_MVC)'
+2023-12-25 20:04:37.152 +03:00 [INF] Route matched with {action = "AppUserLogin", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AppUserLogin(System.String) on controller Sucre_MVC.Controllers.AppUserController (Sucre_MVC).
+2023-12-25 20:04:37.601 +03:00 [WRN] No store type was specified for the decimal property 'A_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.602 +03:00 [WRN] No store type was specified for the decimal property 'A_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.603 +03:00 [WRN] No store type was specified for the decimal property 'High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.604 +03:00 [WRN] No store type was specified for the decimal property 'Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.604 +03:00 [WRN] No store type was specified for the decimal property 'W_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.605 +03:00 [WRN] No store type was specified for the decimal property 'W_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.605 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueDay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.606 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueHour'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.606 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueMounth'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:04:37.716 +03:00 [INF] *->Use IRepository DbSucreCex-20:04
+2023-12-25 20:04:37.717 +03:00 [INF] SucreUnitOfWork use
+2023-12-25 20:04:37.718 +03:00 [INF] *->SucreUnitOfWork use
+2023-12-25 20:04:37.756 +03:00 [INF] Executing ViewResult, running view AppUserLogin.
+2023-12-25 20:04:37.839 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-25 20:04:37.856 +03:00 [INF] Executed ViewResult - view AppUserLogin executed in 101.2979ms.
+2023-12-25 20:04:37.857 +03:00 [INF] Executed action Sucre_MVC.Controllers.AppUserController.AppUserLogin (Sucre_MVC) in 700.2656ms
+2023-12-25 20:04:37.858 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLogin (Sucre_MVC)'
+2023-12-25 20:04:37.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - -
+2023-12-25 20:04:37.864 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/lib/jquery-validation/dist/jquery.validate.min.js - -
+2023-12-25 20:04:37.866 +03:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2023-12-25 20:04:37.866 +03:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2023-12-25 20:04:37.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/AppUser/AppUserLogin - - - 200 - text/html;+charset=utf-8 734.4871ms
+2023-12-25 20:04:37.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/lib/jquery-validation/dist/jquery.validate.min.js - - - 304 - text/javascript 3.6749ms
+2023-12-25 20:04:37.868 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - - - 304 - text/javascript 4.2427ms
+2023-12-25 20:04:37.870 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 20:04:37.870 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-25 20:04:37.871 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 13754 application/javascript;+charset=utf-8 1.4671ms
+2023-12-25 20:04:37.894 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 23.9236ms
+2023-12-25 20:04:37.914 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-25 20:04:37.918 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-25 20:04:37.919 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 4.3909ms
+2023-12-25 20:04:47.906 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7291/AppUser/AppUserLogin multipart/form-data;+boundary=----WebKitFormBoundaryJIDuCUO0em4WfQtu 621
+2023-12-25 20:04:47.919 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLoginPost (Sucre_MVC)'
+2023-12-25 20:04:47.925 +03:00 [INF] Route matched with {action = "AppUserLogin", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AppUserLoginPost(Sucre_Models.AppUserLoginM) on controller Sucre_MVC.Controllers.AppUserController (Sucre_MVC).
+2023-12-25 20:04:47.971 +03:00 [INF] *->Use IRepository DbSucreCex-20:04
+2023-12-25 20:04:47.972 +03:00 [INF] SucreUnitOfWork use
+2023-12-25 20:04:47.972 +03:00 [INF] *->SucreUnitOfWork use
+2023-12-25 20:04:48.038 +03:00 [INF] AuthenticationScheme: Cookies signed in.
+2023-12-25 20:04:48.042 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2023-12-25 20:04:48.043 +03:00 [INF] Executed action Sucre_MVC.Controllers.AppUserController.AppUserLoginPost (Sucre_MVC) in 111.9973ms
+2023-12-25 20:04:48.044 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.AppUserController.AppUserLoginPost (Sucre_MVC)'
+2023-12-25 20:04:48.045 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7291/AppUser/AppUserLogin multipart/form-data;+boundary=----WebKitFormBoundaryJIDuCUO0em4WfQtu 621 - 302 0 - 139.1522ms
+2023-12-25 20:04:48.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - -
+2023-12-25 20:04:48.052 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-25 20:04:48.053 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-25 20:04:48.057 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-25 20:04:48.061 +03:00 [INF] *->Run action Home-Index
+2023-12-25 20:04:48.061 +03:00 [INF] *->Run action Home-Index
+2023-12-25 20:04:48.062 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 20:04:48.096 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-25 20:04:48.103 +03:00 [INF] Executed ViewResult - view Index executed in 41.1352ms.
+2023-12-25 20:04:48.104 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 47.0008ms
+2023-12-25 20:04:48.105 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-25 20:04:48.106 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - - - 200 - text/html;+charset=utf-8 60.0756ms
+2023-12-25 20:04:48.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 20:04:48.112 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-25 20:04:48.113 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 13754 application/javascript;+charset=utf-8 1.3953ms
+2023-12-25 20:04:48.126 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 13.6466ms
+2023-12-25 20:04:48.138 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-25 20:04:48.142 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-25 20:04:48.143 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 5.3118ms
+2023-12-25 20:04:52.254 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/Energy - -
+2023-12-25 20:04:52.265 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.EnergyController.Index (Sucre_MVC)'
+2023-12-25 20:04:52.268 +03:00 [INF] Route matched with {action = "Index", controller = "Energy"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Sucre_MVC.Controllers.EnergyController (Sucre_MVC).
+2023-12-25 20:04:52.282 +03:00 [INF] *->FILTER_TEST_RESOURCE...SimpleAsync
+2023-12-25 20:04:52.295 +03:00 [INF] *->Use IRepository DbSucreCex-20:04
+2023-12-25 20:04:52.295 +03:00 [INF] SucreUnitOfWork use
+2023-12-25 20:04:52.295 +03:00 [INF] *->SucreUnitOfWork use
+2023-12-25 20:04:53.376 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[EnergyName]
+FROM [Enegies] AS [e]
+2023-12-25 20:04:53.507 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 20:04:53.639 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-25 20:04:53.649 +03:00 [INF] Executed ViewResult - view Index executed in 143.6996ms.
+2023-12-25 20:04:53.651 +03:00 [INF] Executed action Sucre_MVC.Controllers.EnergyController.Index (Sucre_MVC) in 1369.2896ms
+2023-12-25 20:04:53.651 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.EnergyController.Index (Sucre_MVC)'
+2023-12-25 20:04:53.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/Energy - - - 200 - text/html;+charset=utf-8 1403.8695ms
+2023-12-25 20:04:53.672 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-25 20:04:53.675 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-25 20:04:53.676 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 4.3655ms
+2023-12-25 20:04:53.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 20:04:53.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-25 20:04:53.726 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 13754 application/javascript;+charset=utf-8 1.9260ms
+2023-12-25 20:04:53.733 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 9.7117ms
+2023-12-25 20:05:00.755 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/ - -
+2023-12-25 20:05:00.761 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-25 20:05:00.762 +03:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-25 20:05:00.766 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-25 20:05:00.768 +03:00 [INF] *->Run action Home-Index
+2023-12-25 20:05:00.769 +03:00 [INF] *->Run action Home-Index
+2023-12-25 20:05:00.770 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 20:05:00.798 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-25 20:05:00.802 +03:00 [INF] Executed ViewResult - view Index executed in 33.1622ms.
+2023-12-25 20:05:00.804 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC) in 37.3749ms
+2023-12-25 20:05:00.805 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.Index (Sucre_MVC)'
+2023-12-25 20:05:00.806 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/ - - - 200 - text/html;+charset=utf-8 51.0379ms
+2023-12-25 20:05:00.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-25 20:05:00.808 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 20:05:00.810 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 13754 application/javascript;+charset=utf-8 2.1284ms
+2023-12-25 20:05:00.819 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 10.6248ms
+2023-12-25 20:05:00.828 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-25 20:05:00.830 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-25 20:05:00.831 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 3.6989ms
+2023-12-25 20:05:02.512 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/Home/InitDbData - -
+2023-12-25 20:05:02.524 +03:00 [INF] Executing endpoint 'Sucre_MVC.Controllers.HomeController.InitDbData (Sucre_MVC)'
+2023-12-25 20:05:02.526 +03:00 [INF] Route matched with {action = "InitDbData", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult InitDbData() on controller Sucre_MVC.Controllers.HomeController (Sucre_MVC).
+2023-12-25 20:05:02.531 +03:00 [INF] *->FILTER_TEST_RESOURCE...IE - Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+2023-12-25 20:05:02.534 +03:00 [INF] *->InitApplicattionDbContext->InitDbvalue...BEGIN
+2023-12-25 20:05:02.552 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 20:05:05.625 +03:00 [INF] Executed DbCommand (3,048ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Sucre-00] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+END;
+2023-12-25 20:05:05.779 +03:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+DROP DATABASE [Sucre-00];
+2023-12-25 20:05:05.838 +03:00 [WRN] No store type was specified for the decimal property 'A_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.839 +03:00 [WRN] No store type was specified for the decimal property 'A_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.840 +03:00 [WRN] No store type was specified for the decimal property 'High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.840 +03:00 [WRN] No store type was specified for the decimal property 'Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.841 +03:00 [WRN] No store type was specified for the decimal property 'W_High' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.842 +03:00 [WRN] No store type was specified for the decimal property 'W_Low' on entity type 'AsPaz'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.843 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueDay'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.844 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueHour'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:05.844 +03:00 [WRN] No store type was specified for the decimal property 'Value' on entity type 'ValueMounth'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-25 20:05:06.108 +03:00 [INF] Executed DbCommand (246ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+CREATE DATABASE [Sucre-00];
+2023-12-25 20:05:06.173 +03:00 [INF] Executed DbCommand (60ms) [Parameters=[], CommandType='"Text"', CommandTimeout='60']
+IF SERVERPROPERTY('EngineEdition') <> 5
+BEGIN
+    ALTER DATABASE [Sucre-00] SET READ_COMMITTED_SNAPSHOT ON;
+END;
+2023-12-25 20:05:06.191 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2023-12-25 20:05:06.283 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppRoles] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(12) NOT NULL,
+    [Value] nvarchar(255) NOT NULL,
+    CONSTRAINT [PK_AppRoles] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.290 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppUsers] (
+    [Id] uniqueidentifier NOT NULL,
+    [Name] nvarchar(30) NULL,
+    [Description] nvarchar(255) NULL,
+    [Email] nvarchar(max) NOT NULL,
+    [PasswordHash] nvarchar(max) NOT NULL,
+    [GroupNumber] int NOT NULL,
+    CONSTRAINT [PK_AppUsers] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.296 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Cexs] (
+    [Id] int NOT NULL IDENTITY,
+    [Management] nvarchar(35) NULL,
+    [CexName] nvarchar(35) NULL,
+    [Area] nvarchar(50) NULL,
+    [Device] nvarchar(50) NULL,
+    [Location] nvarchar(70) NULL,
+    CONSTRAINT [PK_Cexs] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.301 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Enegies] (
+    [Id] int NOT NULL IDENTITY,
+    [EnergyName] nvarchar(15) NOT NULL,
+    CONSTRAINT [PK_Enegies] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.307 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupUsers] (
+    [Id] int NOT NULL IDENTITY,
+    [Number] int NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    CONSTRAINT [PK_GroupUsers] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.312 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ParameterTypes] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(15) NOT NULL,
+    [Mnemo] nvarchar(5) NOT NULL,
+    [UnitMeas] nvarchar(8) NOT NULL,
+    CONSTRAINT [PK_ParameterTypes] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.318 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Reports] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(25) NOT NULL,
+    [Description] nvarchar(255) NOT NULL,
+    CONSTRAINT [PK_Reports] PRIMARY KEY ([Id])
+);
+2023-12-25 20:05:06.325 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AppRoleAppUser] (
+    [AppRolesId] uniqueidentifier NOT NULL,
+    [AppUsersId] uniqueidentifier NOT NULL,
+    CONSTRAINT [PK_AppRoleAppUser] PRIMARY KEY ([AppRolesId], [AppUsersId]),
+    CONSTRAINT [FK_AppRoleAppUser_AppRoles_AppRolesId] FOREIGN KEY ([AppRolesId]) REFERENCES [AppRoles] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_AppRoleAppUser_AppUsers_AppUsersId] FOREIGN KEY ([AppUsersId]) REFERENCES [AppUsers] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.337 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Points] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(25) NOT NULL,
+    [Description] nvarchar(255) NULL,
+    [EnergyId] int NOT NULL,
+    [CexId] int NOT NULL,
+    [ServiceStaff] nvarchar(20) NULL,
+    CONSTRAINT [PK_Points] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Points_Cexs_CexId] FOREIGN KEY ([CexId]) REFERENCES [Cexs] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_Points_Enegies_EnergyId] FOREIGN KEY ([EnergyId]) REFERENCES [Enegies] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.344 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Canals] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(30) NOT NULL,
+    [Description] nvarchar(255) NULL,
+    [ParameterTypeId] int NOT NULL,
+    [Reader] bit NOT NULL,
+    [SourceType] int NOT NULL,
+    [AsPazEin] bit NOT NULL,
+    CONSTRAINT [PK_Canals] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Canals_ParameterTypes_ParameterTypeId] FOREIGN KEY ([ParameterTypeId]) REFERENCES [ParameterTypes] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.367 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [GroupUserReport] (
+    [GroupUsersId] int NOT NULL,
+    [ReportsId] int NOT NULL,
+    CONSTRAINT [PK_GroupUserReport] PRIMARY KEY ([GroupUsersId], [ReportsId]),
+    CONSTRAINT [FK_GroupUserReport_GroupUsers_GroupUsersId] FOREIGN KEY ([GroupUsersId]) REFERENCES [GroupUsers] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_GroupUserReport_Reports_ReportsId] FOREIGN KEY ([ReportsId]) REFERENCES [Reports] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.385 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AsPazs] (
+    [Id] int NOT NULL IDENTITY,
+    [High] decimal(18,2) NULL,
+    [Low] decimal(18,2) NULL,
+    [A_High] decimal(18,2) NULL,
+    [W_High] decimal(18,2) NULL,
+    [W_Low] decimal(18,2) NULL,
+    [A_Low] decimal(18,2) NULL,
+    [A_HighEin] bit NOT NULL,
+    [W_HighEin] bit NOT NULL,
+    [W_LowEin] bit NOT NULL,
+    [A_LowEin] bit NOT NULL,
+    [A_HighType] bit NOT NULL,
+    [W_HighType] bit NOT NULL,
+    [W_LowType] bit NOT NULL,
+    [A_LowType] bit NOT NULL,
+    [CanalId] int NULL,
+    CONSTRAINT [PK_AsPazs] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_AsPazs_Canals_CanalId] FOREIGN KEY ([CanalId]) REFERENCES [Canals] ([Id])
+);
+2023-12-25 20:05:06.394 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [CanalPoint] (
+    [CanalsId] int NOT NULL,
+    [PointsId] int NOT NULL,
+    CONSTRAINT [PK_CanalPoint] PRIMARY KEY ([CanalsId], [PointsId]),
+    CONSTRAINT [FK_CanalPoint_Canals_CanalsId] FOREIGN KEY ([CanalsId]) REFERENCES [Canals] ([Id]) ON DELETE CASCADE,
+    CONSTRAINT [FK_CanalPoint_Points_PointsId] FOREIGN KEY ([PointsId]) REFERENCES [Points] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.402 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ValuesDay] (
+    [Id] int NOT NULL,
+    [Date] datetime2 NOT NULL,
+    [Value] decimal(18,2) NOT NULL,
+    [Changed] bit NOT NULL,
+    CONSTRAINT [PK_ValuesDay] PRIMARY KEY ([Id], [Date]),
+    CONSTRAINT [FK_ValuesDay_Canals_Id] FOREIGN KEY ([Id]) REFERENCES [Canals] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.416 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ValuesHour] (
+    [Id] int NOT NULL,
+    [Date] datetime2 NOT NULL,
+    [Hour] int NOT NULL,
+    [Value] decimal(18,2) NOT NULL,
+    [Changed] bit NOT NULL,
+    CONSTRAINT [PK_ValuesHour] PRIMARY KEY ([Id], [Date], [Hour]),
+    CONSTRAINT [FK_ValuesHour_Canals_Id] FOREIGN KEY ([Id]) REFERENCES [Canals] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.438 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [ValuesMounth] (
+    [Id] int NOT NULL,
+    [Date] datetime2 NOT NULL,
+    [Value] decimal(18,2) NOT NULL,
+    [Changed] bit NOT NULL,
+    [PlanFact] bit NOT NULL,
+    CONSTRAINT [PK_ValuesMounth] PRIMARY KEY ([Id], [Date]),
+    CONSTRAINT [FK_ValuesMounth_Canals_Id] FOREIGN KEY ([Id]) REFERENCES [Canals] ([Id]) ON DELETE CASCADE
+);
+2023-12-25 20:05:06.446 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_AppRoleAppUser_AppUsersId] ON [AppRoleAppUser] ([AppUsersId]);
+2023-12-25 20:05:06.452 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX [IX_AsPazs_CanalId] ON [AsPazs] ([CanalId]) WHERE [CanalId] IS NOT NULL;
+2023-12-25 20:05:06.458 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_CanalPoint_PointsId] ON [CanalPoint] ([PointsId]);
+2023-12-25 20:05:06.463 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Canals_ParameterTypeId] ON [Canals] ([ParameterTypeId]);
+2023-12-25 20:05:06.477 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_GroupUserReport_ReportsId] ON [GroupUserReport] ([ReportsId]);
+2023-12-25 20:05:06.498 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Points_CexId] ON [Points] ([CexId]);
+2023-12-25 20:05:06.503 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Points_EnergyId] ON [Points] ([EnergyId]);
+2023-12-25 20:05:06.517 +03:00 [INF] *->InitApplicattionDbContext->InitDbvalue->SetValueDb...START
+2023-12-25 20:05:06.733 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@p0='?' (Size = 50), @p1='?' (Size = 35), @p2='?' (Size = 50), @p3='?' (Size = 70), @p4='?' (Size = 35), @p5='?' (Size = 50), @p6='?' (Size = 35), @p7='?' (Size = 50), @p8='?' (Size = 70), @p9='?' (Size = 35), @p10='?' (Size = 50), @p11='?' (Size = 35), @p12='?' (Size = 50), @p13='?' (Size = 70), @p14='?' (Size = 35), @p15='?' (Size = 50), @p16='?' (Size = 35), @p17='?' (Size = 50), @p18='?' (Size = 70), @p19='?' (Size = 35), @p20='?' (Size = 50), @p21='?' (Size = 35), @p22='?' (Size = 50), @p23='?' (Size = 70), @p24='?' (Size = 35), @p25='?' (Size = 15), @p26='?' (Size = 15), @p27='?' (Size = 15), @p28='?' (Size = 15), @p29='?' (Size = 15), @p30='?' (Size = 5), @p31='?' (Size = 15), @p32='?' (Size = 8), @p33='?' (Size = 5), @p34='?' (Size = 15), @p35='?' (Size = 8), @p36='?' (Size = 5), @p37='?' (Size = 15), @p38='?' (Size = 8), @p39='?' (Size = 5), @p40='?' (Size = 15), @p41='?' (Size = 8), @p42='?' (Size = 5), @p43='?' (Size = 15), @p44='?' (Size = 8), @p45='?' (Size = 5), @p46='?' (Size = 15), @p47='?' (Size = 8), @p48='?' (Size = 5), @p49='?' (Size = 15), @p50='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+MERGE [Cexs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4)) AS i ([Area], [CexName], [Device], [Location], [Management], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Area], [CexName], [Device], [Location], [Management])
+VALUES (i.[Area], i.[CexName], i.[Device], i.[Location], i.[Management])
+OUTPUT INSERTED.[Id], i._Position;
+MERGE [Enegies] USING (
+VALUES (@p25, 0),
+(@p26, 1),
+(@p27, 2),
+(@p28, 3),
+(@p29, 4)) AS i ([EnergyName], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([EnergyName])
+VALUES (i.[EnergyName])
+OUTPUT INSERTED.[Id], i._Position;
+MERGE [ParameterTypes] USING (
+VALUES (@p30, @p31, @p32, 0),
+(@p33, @p34, @p35, 1),
+(@p36, @p37, @p38, 2),
+(@p39, @p40, @p41, 3),
+(@p42, @p43, @p44, 4),
+(@p45, @p46, @p47, 5),
+(@p48, @p49, @p50, 6)) AS i ([Mnemo], [Name], [UnitMeas], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Mnemo], [Name], [UnitMeas])
+VALUES (i.[Mnemo], i.[Name], i.[UnitMeas])
+OUTPUT INSERTED.[Id], i._Position;
+2023-12-25 20:05:06.899 +03:00 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 255), @p2='?' (Size = 30), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 255), @p8='?' (Size = 30), @p9='?' (DbType = Int32), @p10='?' (DbType = Boolean), @p11='?' (DbType = Int32), @p12='?' (DbType = Boolean), @p13='?' (Size = 255), @p14='?' (Size = 30), @p15='?' (DbType = Int32), @p16='?' (DbType = Boolean), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (Size = 255), @p20='?' (Size = 30), @p21='?' (DbType = Int32), @p22='?' (DbType = Boolean), @p23='?' (DbType = Int32), @p24='?' (DbType = Boolean), @p25='?' (Size = 255), @p26='?' (Size = 30), @p27='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (DbType = Int32), @p30='?' (DbType = Boolean), @p31='?' (Size = 255), @p32='?' (Size = 30), @p33='?' (DbType = Int32), @p34='?' (DbType = Boolean), @p35='?' (DbType = Int32), @p36='?' (DbType = Boolean), @p37='?' (Size = 255), @p38='?' (Size = 30), @p39='?' (DbType = Int32), @p40='?' (DbType = Boolean), @p41='?' (DbType = Int32), @p42='?' (DbType = Boolean), @p43='?' (Size = 255), @p44='?' (Size = 30), @p45='?' (DbType = Int32), @p46='?' (DbType = Boolean), @p47='?' (DbType = Int32), @p48='?' (DbType = Int32), @p49='?' (Size = 255), @p50='?' (DbType = Int32), @p51='?' (Size = 25), @p52='?' (Size = 20), @p53='?' (DbType = Int32), @p54='?' (Size = 255), @p55='?' (DbType = Int32), @p56='?' (Size = 25), @p57='?' (Size = 20), @p58='?' (DbType = Int32), @p59='?' (Size = 255), @p60='?' (DbType = Int32), @p61='?' (Size = 25), @p62='?' (Size = 20), @p63='?' (DbType = Int32), @p64='?' (Size = 255), @p65='?' (DbType = Int32), @p66='?' (Size = 25), @p67='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+MERGE [Canals] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, 0),
+(@p6, @p7, @p8, @p9, @p10, @p11, 1),
+(@p12, @p13, @p14, @p15, @p16, @p17, 2),
+(@p18, @p19, @p20, @p21, @p22, @p23, 3),
+(@p24, @p25, @p26, @p27, @p28, @p29, 4),
+(@p30, @p31, @p32, @p33, @p34, @p35, 5),
+(@p36, @p37, @p38, @p39, @p40, @p41, 6),
+(@p42, @p43, @p44, @p45, @p46, @p47, 7)) AS i ([AsPazEin], [Description], [Name], [ParameterTypeId], [Reader], [SourceType], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([AsPazEin], [Description], [Name], [ParameterTypeId], [Reader], [SourceType])
+VALUES (i.[AsPazEin], i.[Description], i.[Name], i.[ParameterTypeId], i.[Reader], i.[SourceType])
+OUTPUT INSERTED.[Id], i._Position;
+MERGE [Points] USING (
+VALUES (@p48, @p49, @p50, @p51, @p52, 0),
+(@p53, @p54, @p55, @p56, @p57, 1),
+(@p58, @p59, @p60, @p61, @p62, 2),
+(@p63, @p64, @p65, @p66, @p67, 3)) AS i ([CexId], [Description], [EnergyId], [Name], [ServiceStaff], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([CexId], [Description], [EnergyId], [Name], [ServiceStaff])
+VALUES (i.[CexId], i.[Description], i.[EnergyId], i.[Name], i.[ServiceStaff])
+OUTPUT INSERTED.[Id], i._Position;
+2023-12-25 20:05:07.000 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p13='?' (DbType = Boolean), @p14='?' (DbType = Boolean), @p15='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p16='?' (DbType = Boolean), @p17='?' (DbType = Boolean), @p18='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p19='?' (DbType = Boolean), @p20='?' (DbType = Boolean), @p21='?' (DbType = Int32), @p22='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p23='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p24='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p25='?' (DbType = Boolean), @p26='?' (DbType = Boolean), @p27='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p28='?' (DbType = Boolean), @p29='?' (DbType = Boolean), @p30='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p31='?' (DbType = Boolean), @p32='?' (DbType = Boolean), @p33='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p34='?' (DbType = Boolean), @p35='?' (DbType = Boolean), @p36='?' (DbType = Int32), @p37='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p38='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p39='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p40='?' (DbType = Boolean), @p41='?' (DbType = Boolean), @p42='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p43='?' (DbType = Boolean), @p44='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [AsPazs] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, 0),
+(@p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22, @p23, @p24, @p25, @p26, @p27, @p28, @p29, 1),
+(@p30, @p31, @p32, @p33, @p34, @p35, @p36, @p37, @p38, @p39, @p40, @p41, @p42, @p43, @p44, 2)) AS i ([A_High], [A_HighEin], [A_HighType], [A_Low], [A_LowEin], [A_LowType], [CanalId], [High], [Low], [W_High], [W_HighEin], [W_HighType], [W_Low], [W_LowEin], [W_LowType], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([A_High], [A_HighEin], [A_HighType], [A_Low], [A_LowEin], [A_LowType], [CanalId], [High], [Low], [W_High], [W_HighEin], [W_HighType], [W_Low], [W_LowEin], [W_LowType])
+VALUES (i.[A_High], i.[A_HighEin], i.[A_HighType], i.[A_Low], i.[A_LowEin], i.[A_LowType], i.[CanalId], i.[High], i.[Low], i.[W_High], i.[W_HighEin], i.[W_HighType], i.[W_Low], i.[W_LowEin], i.[W_LowType])
+OUTPUT INSERTED.[Id], i._Position;
+2023-12-25 20:05:07.088 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@p15='?' (DbType = Int32), @p0='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p1='?' (DbType = Boolean), @p2='?' (DbType = Boolean), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = Boolean), @p5='?' (DbType = Boolean), @p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p9='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p10='?' (DbType = Boolean), @p11='?' (DbType = Boolean), @p12='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p13='?' (DbType = Boolean), @p14='?' (DbType = Boolean), @p31='?' (DbType = Int32), @p16='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p17='?' (DbType = Boolean), @p18='?' (DbType = Boolean), @p19='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p20='?' (DbType = Boolean), @p21='?' (DbType = Boolean), @p22='?' (DbType = Int32), @p23='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p24='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p25='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p26='?' (DbType = Boolean), @p27='?' (DbType = Boolean), @p28='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p29='?' (DbType = Boolean), @p30='?' (DbType = Boolean), @p47='?' (DbType = Int32), @p32='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p33='?' (DbType = Boolean), @p34='?' (DbType = Boolean), @p35='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p36='?' (DbType = Boolean), @p37='?' (DbType = Boolean), @p38='?' (DbType = Int32), @p39='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p40='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p41='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p42='?' (DbType = Boolean), @p43='?' (DbType = Boolean), @p44='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p45='?' (DbType = Boolean), @p46='?' (DbType = Boolean), @p53='?' (DbType = Int32), @p48='?' (Size = 50), @p49='?' (Size = 35), @p50='?' (Size = 50), @p51='?' (Size = 70), @p52='?' (Size = 35), @p59='?' (DbType = Int32), @p54='?' (Size = 50), @p55='?' (Size = 35), @p56='?' (Size = 50), @p57='?' (Size = 70), @p58='?' (Size = 35), @p65='?' (DbType = Int32), @p60='?' (Size = 50), @p61='?' (Size = 35), @p62='?' (Size = 50), @p63='?' (Size = 70), @p64='?' (Size = 35), @p71='?' (DbType = Int32), @p66='?' (Size = 50), @p67='?' (Size = 35), @p68='?' (Size = 50), @p69='?' (Size = 70), @p70='?' (Size = 35), @p77='?' (DbType = Int32), @p72='?' (Size = 50), @p73='?' (Size = 35), @p74='?' (Size = 50), @p75='?' (Size = 70), @p76='?' (Size = 35), @p79='?' (DbType = Int32), @p78='?' (Size = 15), @p81='?' (DbType = Int32), @p80='?' (Size = 15), @p83='?' (DbType = Int32), @p82='?' (Size = 15), @p85='?' (DbType = Int32), @p84='?' (Size = 15), @p87='?' (DbType = Int32), @p86='?' (Size = 15), @p91='?' (DbType = Int32), @p88='?' (Size = 5), @p89='?' (Size = 15), @p90='?' (Size = 8), @p95='?' (DbType = Int32), @p92='?' (Size = 5), @p93='?' (Size = 15), @p94='?' (Size = 8), @p99='?' (DbType = Int32), @p96='?' (Size = 5), @p97='?' (Size = 15), @p98='?' (Size = 8), @p103='?' (DbType = Int32), @p100='?' (Size = 5), @p101='?' (Size = 15), @p102='?' (Size = 8), @p107='?' (DbType = Int32), @p104='?' (Size = 5), @p105='?' (Size = 15), @p106='?' (Size = 8), @p111='?' (DbType = Int32), @p108='?' (Size = 5), @p109='?' (Size = 15), @p110='?' (Size = 8), @p115='?' (DbType = Int32), @p112='?' (Size = 5), @p113='?' (Size = 15), @p114='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [AsPazs] SET [A_High] = @p0, [A_HighEin] = @p1, [A_HighType] = @p2, [A_Low] = @p3, [A_LowEin] = @p4, [A_LowType] = @p5, [CanalId] = @p6, [High] = @p7, [Low] = @p8, [W_High] = @p9, [W_HighEin] = @p10, [W_HighType] = @p11, [W_Low] = @p12, [W_LowEin] = @p13, [W_LowType] = @p14
+OUTPUT 1
+WHERE [Id] = @p15;
+UPDATE [AsPazs] SET [A_High] = @p16, [A_HighEin] = @p17, [A_HighType] = @p18, [A_Low] = @p19, [A_LowEin] = @p20, [A_LowType] = @p21, [CanalId] = @p22, [High] = @p23, [Low] = @p24, [W_High] = @p25, [W_HighEin] = @p26, [W_HighType] = @p27, [W_Low] = @p28, [W_LowEin] = @p29, [W_LowType] = @p30
+OUTPUT 1
+WHERE [Id] = @p31;
+UPDATE [AsPazs] SET [A_High] = @p32, [A_HighEin] = @p33, [A_HighType] = @p34, [A_Low] = @p35, [A_LowEin] = @p36, [A_LowType] = @p37, [CanalId] = @p38, [High] = @p39, [Low] = @p40, [W_High] = @p41, [W_HighEin] = @p42, [W_HighType] = @p43, [W_Low] = @p44, [W_LowEin] = @p45, [W_LowType] = @p46
+OUTPUT 1
+WHERE [Id] = @p47;
+UPDATE [Cexs] SET [Area] = @p48, [CexName] = @p49, [Device] = @p50, [Location] = @p51, [Management] = @p52
+OUTPUT 1
+WHERE [Id] = @p53;
+UPDATE [Cexs] SET [Area] = @p54, [CexName] = @p55, [Device] = @p56, [Location] = @p57, [Management] = @p58
+OUTPUT 1
+WHERE [Id] = @p59;
+UPDATE [Cexs] SET [Area] = @p60, [CexName] = @p61, [Device] = @p62, [Location] = @p63, [Management] = @p64
+OUTPUT 1
+WHERE [Id] = @p65;
+UPDATE [Cexs] SET [Area] = @p66, [CexName] = @p67, [Device] = @p68, [Location] = @p69, [Management] = @p70
+OUTPUT 1
+WHERE [Id] = @p71;
+UPDATE [Cexs] SET [Area] = @p72, [CexName] = @p73, [Device] = @p74, [Location] = @p75, [Management] = @p76
+OUTPUT 1
+WHERE [Id] = @p77;
+UPDATE [Enegies] SET [EnergyName] = @p78
+OUTPUT 1
+WHERE [Id] = @p79;
+UPDATE [Enegies] SET [EnergyName] = @p80
+OUTPUT 1
+WHERE [Id] = @p81;
+UPDATE [Enegies] SET [EnergyName] = @p82
+OUTPUT 1
+WHERE [Id] = @p83;
+UPDATE [Enegies] SET [EnergyName] = @p84
+OUTPUT 1
+WHERE [Id] = @p85;
+UPDATE [Enegies] SET [EnergyName] = @p86
+OUTPUT 1
+WHERE [Id] = @p87;
+UPDATE [ParameterTypes] SET [Mnemo] = @p88, [Name] = @p89, [UnitMeas] = @p90
+OUTPUT 1
+WHERE [Id] = @p91;
+UPDATE [ParameterTypes] SET [Mnemo] = @p92, [Name] = @p93, [UnitMeas] = @p94
+OUTPUT 1
+WHERE [Id] = @p95;
+UPDATE [ParameterTypes] SET [Mnemo] = @p96, [Name] = @p97, [UnitMeas] = @p98
+OUTPUT 1
+WHERE [Id] = @p99;
+UPDATE [ParameterTypes] SET [Mnemo] = @p100, [Name] = @p101, [UnitMeas] = @p102
+OUTPUT 1
+WHERE [Id] = @p103;
+UPDATE [ParameterTypes] SET [Mnemo] = @p104, [Name] = @p105, [UnitMeas] = @p106
+OUTPUT 1
+WHERE [Id] = @p107;
+UPDATE [ParameterTypes] SET [Mnemo] = @p108, [Name] = @p109, [UnitMeas] = @p110
+OUTPUT 1
+WHERE [Id] = @p111;
+UPDATE [ParameterTypes] SET [Mnemo] = @p112, [Name] = @p113, [UnitMeas] = @p114
+OUTPUT 1
+WHERE [Id] = @p115;
+2023-12-25 20:05:07.184 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32), @p7='?' (DbType = Int32), @p8='?' (DbType = Int32), @p9='?' (DbType = Int32), @p10='?' (DbType = Int32), @p11='?' (DbType = Int32), @p12='?' (DbType = Int32), @p13='?' (DbType = Int32), @p14='?' (DbType = Int32), @p15='?' (DbType = Int32), @p16='?' (DbType = Int32), @p17='?' (DbType = Int32), @p18='?' (DbType = Int32), @p19='?' (DbType = Int32), @p20='?' (DbType = Int32), @p21='?' (DbType = Int32), @p22='?' (DbType = Int32), @p23='?' (DbType = Int32), @p24='?' (DbType = Int32), @p25='?' (DbType = Int32), @p26='?' (DbType = Int32), @p27='?' (DbType = Int32), @p33='?' (DbType = Int32), @p28='?' (DbType = Int32), @p29='?' (Size = 255), @p30='?' (DbType = Int32), @p31='?' (Size = 25), @p32='?' (Size = 20), @p39='?' (DbType = Int32), @p34='?' (DbType = Int32), @p35='?' (Size = 255), @p36='?' (DbType = Int32), @p37='?' (Size = 25), @p38='?' (Size = 20), @p45='?' (DbType = Int32), @p40='?' (DbType = Int32), @p41='?' (Size = 255), @p42='?' (DbType = Int32), @p43='?' (Size = 25), @p44='?' (Size = 20), @p51='?' (DbType = Int32), @p46='?' (DbType = Int32), @p47='?' (Size = 255), @p48='?' (DbType = Int32), @p49='?' (Size = 25), @p50='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [CanalPoint] ([CanalsId], [PointsId])
+VALUES (@p0, @p1),
+(@p2, @p3),
+(@p4, @p5),
+(@p6, @p7),
+(@p8, @p9),
+(@p10, @p11),
+(@p12, @p13),
+(@p14, @p15),
+(@p16, @p17),
+(@p18, @p19),
+(@p20, @p21),
+(@p22, @p23),
+(@p24, @p25),
+(@p26, @p27);
+UPDATE [Points] SET [CexId] = @p28, [Description] = @p29, [EnergyId] = @p30, [Name] = @p31, [ServiceStaff] = @p32
+OUTPUT 1
+WHERE [Id] = @p33;
+UPDATE [Points] SET [CexId] = @p34, [Description] = @p35, [EnergyId] = @p36, [Name] = @p37, [ServiceStaff] = @p38
+OUTPUT 1
+WHERE [Id] = @p39;
+UPDATE [Points] SET [CexId] = @p40, [Description] = @p41, [EnergyId] = @p42, [Name] = @p43, [ServiceStaff] = @p44
+OUTPUT 1
+WHERE [Id] = @p45;
+UPDATE [Points] SET [CexId] = @p46, [Description] = @p47, [EnergyId] = @p48, [Name] = @p49, [ServiceStaff] = @p50
+OUTPUT 1
+WHERE [Id] = @p51;
+2023-12-25 20:05:07.241 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (Size = 255), @p2='?' (Size = 30), @p3='?' (DbType = Int32), @p4='?' (DbType = Boolean), @p5='?' (DbType = Int32), @p13='?' (DbType = Int32), @p7='?' (DbType = Boolean), @p8='?' (Size = 255), @p9='?' (Size = 30), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Int32), @p20='?' (DbType = Int32), @p14='?' (DbType = Boolean), @p15='?' (Size = 255), @p16='?' (Size = 30), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (DbType = Int32), @p27='?' (DbType = Int32), @p21='?' (DbType = Boolean), @p22='?' (Size = 255), @p23='?' (Size = 30), @p24='?' (DbType = Int32), @p25='?' (DbType = Boolean), @p26='?' (DbType = Int32), @p34='?' (DbType = Int32), @p28='?' (DbType = Boolean), @p29='?' (Size = 255), @p30='?' (Size = 30), @p31='?' (DbType = Int32), @p32='?' (DbType = Boolean), @p33='?' (DbType = Int32), @p41='?' (DbType = Int32), @p35='?' (DbType = Boolean), @p36='?' (Size = 255), @p37='?' (Size = 30), @p38='?' (DbType = Int32), @p39='?' (DbType = Boolean), @p40='?' (DbType = Int32), @p48='?' (DbType = Int32), @p42='?' (DbType = Boolean), @p43='?' (Size = 255), @p44='?' (Size = 30), @p45='?' (DbType = Int32), @p46='?' (DbType = Boolean), @p47='?' (DbType = Int32), @p55='?' (DbType = Int32), @p49='?' (DbType = Boolean), @p50='?' (Size = 255), @p51='?' (Size = 30), @p52='?' (DbType = Int32), @p53='?' (DbType = Boolean), @p54='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Canals] SET [AsPazEin] = @p0, [Description] = @p1, [Name] = @p2, [ParameterTypeId] = @p3, [Reader] = @p4, [SourceType] = @p5
+OUTPUT 1
+WHERE [Id] = @p6;
+UPDATE [Canals] SET [AsPazEin] = @p7, [Description] = @p8, [Name] = @p9, [ParameterTypeId] = @p10, [Reader] = @p11, [SourceType] = @p12
+OUTPUT 1
+WHERE [Id] = @p13;
+UPDATE [Canals] SET [AsPazEin] = @p14, [Description] = @p15, [Name] = @p16, [ParameterTypeId] = @p17, [Reader] = @p18, [SourceType] = @p19
+OUTPUT 1
+WHERE [Id] = @p20;
+UPDATE [Canals] SET [AsPazEin] = @p21, [Description] = @p22, [Name] = @p23, [ParameterTypeId] = @p24, [Reader] = @p25, [SourceType] = @p26
+OUTPUT 1
+WHERE [Id] = @p27;
+UPDATE [Canals] SET [AsPazEin] = @p28, [Description] = @p29, [Name] = @p30, [ParameterTypeId] = @p31, [Reader] = @p32, [SourceType] = @p33
+OUTPUT 1
+WHERE [Id] = @p34;
+UPDATE [Canals] SET [AsPazEin] = @p35, [Description] = @p36, [Name] = @p37, [ParameterTypeId] = @p38, [Reader] = @p39, [SourceType] = @p40
+OUTPUT 1
+WHERE [Id] = @p41;
+UPDATE [Canals] SET [AsPazEin] = @p42, [Description] = @p43, [Name] = @p44, [ParameterTypeId] = @p45, [Reader] = @p46, [SourceType] = @p47
+OUTPUT 1
+WHERE [Id] = @p48;
+UPDATE [Canals] SET [AsPazEin] = @p49, [Description] = @p50, [Name] = @p51, [ParameterTypeId] = @p52, [Reader] = @p53, [SourceType] = @p54
+OUTPUT 1
+WHERE [Id] = @p55;
+2023-12-25 20:05:07.298 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 255), @p1='?' (DbType = Int32), @p2='?' (Size = 255), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [GroupUsers] USING (
+VALUES (@p0, @p1, 0),
+(@p2, @p3, 1)) AS i ([Description], [Number], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Description], [Number])
+VALUES (i.[Description], i.[Number])
+OUTPUT INSERTED.[Id], i._Position;
+2023-12-25 20:05:07.396 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 12), @p2='?' (Size = 255), @p3='?' (DbType = Guid), @p4='?' (Size = 12), @p5='?' (Size = 255), @p6='?' (DbType = Guid), @p7='?' (Size = 12), @p8='?' (Size = 255), @p9='?' (DbType = Guid), @p10='?' (Size = 12), @p11='?' (Size = 255), @p12='?' (DbType = Guid), @p13='?' (Size = 255), @p14='?' (Size = 4000), @p15='?' (DbType = Int32), @p16='?' (Size = 30), @p17='?' (Size = 4000), @p18='?' (DbType = Guid), @p19='?' (Size = 255), @p20='?' (Size = 4000), @p21='?' (DbType = Int32), @p22='?' (Size = 30), @p23='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppRoles] ([Id], [Name], [Value])
+VALUES (@p0, @p1, @p2),
+(@p3, @p4, @p5),
+(@p6, @p7, @p8),
+(@p9, @p10, @p11);
+INSERT INTO [AppUsers] ([Id], [Description], [Email], [GroupNumber], [Name], [PasswordHash])
+VALUES (@p12, @p13, @p14, @p15, @p16, @p17),
+(@p18, @p19, @p20, @p21, @p22, @p23);
+2023-12-25 20:05:07.445 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p4='?' (DbType = Guid), @p2='?' (Size = 12), @p3='?' (Size = 255), @p10='?' (DbType = Guid), @p5='?' (Size = 255), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (Size = 30), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppRoleAppUser] ([AppRolesId], [AppUsersId])
+VALUES (@p0, @p1);
+UPDATE [AppRoles] SET [Name] = @p2, [Value] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+UPDATE [AppUsers] SET [Description] = @p5, [Email] = @p6, [GroupNumber] = @p7, [Name] = @p8, [PasswordHash] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2023-12-25 20:05:07.475 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p4='?' (DbType = Guid), @p2='?' (Size = 12), @p3='?' (Size = 255), @p10='?' (DbType = Guid), @p5='?' (Size = 255), @p6='?' (Size = 4000), @p7='?' (DbType = Int32), @p8='?' (Size = 30), @p9='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AppRoleAppUser] ([AppRolesId], [AppUsersId])
+VALUES (@p0, @p1);
+UPDATE [AppRoles] SET [Name] = @p2, [Value] = @p3
+OUTPUT 1
+WHERE [Id] = @p4;
+UPDATE [AppUsers] SET [Description] = @p5, [Email] = @p6, [GroupNumber] = @p7, [Name] = @p8, [PasswordHash] = @p9
+OUTPUT 1
+WHERE [Id] = @p10;
+2023-12-25 20:05:07.484 +03:00 [INF] *->InitApplicattionDbContext->InitDbvalue->SetValueDb...END. Result OK
+2023-12-25 20:05:07.485 +03:00 [INF] *->InitApplicattionDbContext->InitDbvalue...END. Result OK (TRUE)
+2023-12-25 20:05:07.486 +03:00 [INF] Executing ViewResult, running view Index.
+2023-12-25 20:05:07.513 +03:00 [INF] *->InitApplicattionDbContext->get DatabaseName
+2023-12-25 20:05:07.526 +03:00 [INF] Executed ViewResult - view Index executed in 40.8945ms.
+2023-12-25 20:05:07.528 +03:00 [INF] Executed action Sucre_MVC.Controllers.HomeController.InitDbData (Sucre_MVC) in 4996.753ms
+2023-12-25 20:05:07.528 +03:00 [INF] Executed endpoint 'Sucre_MVC.Controllers.HomeController.InitDbData (Sucre_MVC)'
+2023-12-25 20:05:07.549 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_vs/browserLink - -
+2023-12-25 20:05:07.549 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - -
+2023-12-25 20:05:07.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_framework/aspnetcore-browser-refresh.js - - - 200 13754 application/javascript;+charset=utf-8 2.9190ms
+2023-12-25 20:05:07.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/Home/InitDbData - - - 200 - text/html;+charset=utf-8 5040.3338ms
+2023-12-25 20:05:07.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7291/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.8401ms
+2023-12-25 20:05:07.574 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - -
+2023-12-25 20:05:07.578 +03:00 [INF] Sending file. Request path: '/lib/bootstrap532/dist/js/bootstrap.bundle.js.map'. Physical path: 'C:\Projects\ItAcademy\Sukre-v00\Sucre\Sucre_MVC\wwwroot\lib\bootstrap532\dist\js\bootstrap.bundle.js.map'
+2023-12-25 20:05:07.578 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7291/lib/bootstrap532/dist/js/bootstrap.bundle.js.map - - - 200 444286 text/plain 4.1864ms

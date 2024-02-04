@@ -1,0 +1,194 @@
+﻿
+@using Microsoft.AspNetCore.Identity;
+@using Sucre_DataAccess.Entities;
+@using Sucre_DataAccess.Services
+@*@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+*@
+@inject InitApplicattionDbContext DbName
+@{    
+}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sucre</title>
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/lib/bootstrap532/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Sucre_MVC.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row bg-info">
+                <div class="col text-center">                    
+                    <p class="h2 fw-bold font-monospace">С У К Р Э</p>                                        
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar navbar-expand-sm navbar-expand-lg sticky-bottom bg-body-tertiary" data-bs-theme="">
+            <div class="container-fluid border-bottom border-secondary py-0 my-0">
+                @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/SucreIcoBg.png" width="50%" /> </a> *@
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/SukredIco1.png" width="40%" /> </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse font-monospace" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Content Admin
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" asp-controller="ParameterType" asp-action="Index">Parameter Types</a></li>
+                                <li><a class="dropdown-item" asp-controller="Energy" asp-action="Index">Energies List</a></li>
+                                <li><a class="dropdown-item" asp-controller="Cex" asp-action="Index">Locations of metering points</a></li>
+                                <li><a class="dropdown-item" asp-controller="Point" asp-action="Index">List of metering points</a></li>
+                                <li><a class="dropdown-item" asp-controller="Canal" asp-action="Index">List of cannales</a></li>
+                                <li><a class="dropdown-item" asp-controller="Canal" asp-action="ReadManHour">Man Read Channale for Hour Value</a></li>
+                                <li><a class="dropdown-item" asp-controller="Canal" asp-action="ReadManDay">Man Read Channale for Day Value</a></li>
+                                <li><a class="dropdown-item" asp-controller="DeviceTag" asp-action="GetDevices">List of devices</a></li>
+                                @* <li><a class="dropdown-item" asp-controller="DeviceTag" asp-action="GetTags">List Tags</a></li> *@
+                                <li><a class="dropdown-item" asp-controller="Canal" asp-action="GetListJobs">List of Jobs</a></li>
+                                @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.SupervisorRole))
+                                {
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" asp-controller="AppUser" asp-action="ListAppRole">List application roles</a></li>
+                                    <li><a class="dropdown-item" asp-controller="AppUser" asp-action="ListAppUser">List application users</a></li>
+                                }
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Measurement" asp-action="ValueHour">(Values hour)</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Measurement" asp-action="ValueDay">(Values day)</a>
+                        </li>
+                    </ul>
+
+                    @{
+                        var ff = User.Claims.ToList();
+                        var dd = User.IsInRole(WC.UserRole);
+                        var ddd = User.IsInRole(WC.AdminRole);                       
+                    }
+
+                    <ul class="navbar-nav">
+                        
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            @if (User.IsInRole(WC.SupervisorRole))
+                            {
+                                @* <li class="nav-item navbar-text fw-bold">@User.Identity.Name</li> *@
+                                <li class="nav-item nav-link fw-bold">
+                                    Hello, @User.Identity.Name
+                                </li>
+                            }
+                            else
+                            {
+                                @* <li class="nav-item navbar-text fw-bold">@User.Identity.Name</li> *@
+                                <li class="nav-item fw-bold">
+                                    <a class="nav-link" asp-area="" asp-controller="AppUser" asp-action="ProfileCurUser">Hello, @User.Identity.Name</a>
+
+                                </li>
+                            }
+                            <li class="nav-item"><a href="#" class="nav-link link-secondary" @*asp-area="" asp-controller="AppUser" asp-action="AppUserLogout" *@ onclick="logoutLayout()">Logout</a></li>
+                        }
+                        else                        
+                        {                            
+                            <li class="nav-item fw-bold"><a class="nav-link" asp-area="" asp-controller="AppUser" asp-action="AppUserLogin">Login</a></li>
+                            <li class="nav-item fw-bold"><a class="nav-link link-secondary" href="#" onclick="loginLayout()">LoginJs</a></li>
+                        }                        
+                    </ul>
+                    
+                    <span class="navbar-text fw-bold" role="document">@DbName.DatabaseName</span>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Sucre - <a asp-area="" asp-controller="Home" asp-action="Privacy">About</a>
+        </div>
+    </footer>
+
+    @* Modal winwow for logout *@
+    @* modal-fullscreen-sm-down modal-fullscreen-md-down *@
+    <div class="modal fade modal-sm" tabindex="-1" id="modalLogout">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Logs out of your account @User.Identity.Name</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-danger fw-bold h2 text-center">You are ready?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" onclick="logoutBtn()">Log out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* Modal winwow for login *@
+    @* modal-sm modal-fullscreen-sm-down modal-fullscreen-md-down  modal-dialog-centered*@
+    <div class="modal fade" tabindex="-1" id="modalLogin">
+        <div class="modal-dialog modal-fullscreen-md-down">
+            <form method="post" id="login-form">
+                <div class="modal-content border border-3 border-info">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Login with rights</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">                        
+                        <div class="row form-floating py-1">                            
+                            <input type="email" class="form-control border border-1 border-black"
+                                id="Email-input" />
+                            <label for="Email-input">Email</label>                            
+                        </div>
+                        <label id="Email-span" class="text-danger visually-hidden">span</label>
+                        <div class="row form-floating py-1">
+                            <input type="password" class="form-control border border-1 border-black" 
+                                id="Passw-input" />
+                            <label for="Passw-input">Password</label>
+                        </div>
+                        <label id="Passw-span" class="text-danger visually-hidden">span</label>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                        <button type="button" class="btn btn-primary" onclick="loginBtn()">Log in</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    @* <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script> *@
+    <script src="~/lib/bootstrap532/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+`

@@ -1,0 +1,147 @@
+﻿@model Sucre_Models.AppUserM
+@{
+    ViewData["Title"] = "User Profile The Application";
+    Layout = "_Layout";
+}
+
+<h1>Manage your account</h1>
+
+
+<div>
+    <h2>Change your account settings</h2>
+    <hr />
+    <div class="row">
+        <div class="col-md-3">
+            <ul class="nav nav-pills flex-column" aria-orientation="vertical">
+                <li class="nav-item font-monospace"><a href="#" class="nav-link" id="changeProfile" onclick="profileWindow()">Profile</a></li>
+                <li class="nav-item font-monospace"><a href="#" class="nav-link" id="changeEmail" onclick="emailWindow()">Email</a></li>
+                <li class="nav-item font-monospace"><a href="#" class="nav-link" id="changePswd" onclick="pswdWindow()">Password</a></li>
+            </ul>
+
+        </div>
+        <div class="col-md-9">
+        </div>
+    </div>
+</div>
+
+@* Modal winwows *@
+@* 1. Profie *@
+<div class="modal fade" tabindex="-1" id="modalAppUserProfile">
+    <div class="modal-dialog modal-fullscreen-md-down">
+        <form method="post" id="profile-form">
+            <div class="modal-content border border-3 border-info">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change user profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <label id="Profile-span" class="text-danger visually-hidden">span</label>
+                    <div class="row form-floating py-1">
+                        <input asp-for="Email" type="email" readonly="readonly" class="form-control border border-1 border-black"
+                               id="Email-profile" />
+                        <label for="Email-profile">Email</label>
+                    </div>
+                    @* <label id="Email-span" class="text-danger visually-hidden">span</label> *@
+                    <div class="row form-floating py-1">
+                        <input asp-for="Name" type="text" class="form-control border border-1 border-black"
+                               id="Name-profile" />
+                        <label for="Name-profile">Name</label>
+                    </div>
+                    @* <label id="Passw-span" class="text-danger visually-hidden">span</label> *@
+                    <div class="row form-floating py-1">
+                        <textarea asp-for="Description" class="form-control border border-1 border-black"
+                                  id="Description-profile">
+                        </textarea>
+                        @* <input type="text" class="form-control border border-1 border-black"
+                        id="Description-profile" /> *@
+                        <label for="Description-profile">Description</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" onclick="profileSaveBtn()">Save</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@* 2. Email *@
+<div class="modal fade" tabindex="-1" id="modalAppUserEmail">
+    <div class="modal-dialog modal-fullscreen-md-down">
+        <form method="post" id="email-form">
+            <div class="modal-content border border-3 border-info">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change user email</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-floating py-1">
+                        <input asp-for="Email" type="email" readonly="readonly" class="form-control border border-1 border-black"
+                               id="Email-email" />
+                        <label for="Email-email">Current email</label>
+                    </div>
+                    @* <label id="Email-span" class="text-danger visually-hidden">span</label> *@
+                    <div class="row form-floating py-1">
+                        <input type="email" class="form-control border border-1 border-black"
+                               id="EmailNew-email" />
+                        <label for="EmailNew-email">New email</label>
+                    </div>
+                    <label id="EmailNew-email-span" class="text-danger visually-hidden">span</label>                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" onclick="emailSaveBtn()">Change email</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@* 3. Password *@
+<div class="modal fade" tabindex="-1" id="modalAppUserPswd">
+    <div class="modal-dialog modal-fullscreen-md-down">
+        <form method="post" id="pswd-form">
+            <div class="modal-content border border-3 border-info">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change user password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-floating py-1">
+                        <input type="text" class="form-control border border-1 border-black"
+                               id="PswdCurrent-pswd" />
+                        <label for="PswdCurrent-pswd">Current password</label>
+                    </div>
+                    <label id="PswdCurrent-pswd-span" class="text-danger visually-hidden">span</label>
+                    <div class="row form-floating py-1">
+                        <input type="text" class="form-control border border-1 border-black"
+                               id="PswdNew-pswd" />
+                        <label for="PswdNew-pswd">New password</label>
+                    </div>
+                    <label id="PswdNew-pswd-span" class="text-danger visually-hidden">span</label>
+                    <div class="row form-floating py-1">
+                        <input type="text" class="form-control border border-1 border-black"
+                               id="PswdNewConf-pswd" />
+                        <label for="PswdNewConf-pswd">Confirm password</label>
+                    </div>
+                    <label id="PswdNewConf-pswd-span" class="text-danger visually-hidden">span</label>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="button" class="btn btn-primary" onclick="pswdSaveBtn()">Set new password</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+
+</div>
+
+@section Scripts {
+    <script src="~/js/ProfileCurUser.js" asp-append-version="true"></script>
+
+}
+

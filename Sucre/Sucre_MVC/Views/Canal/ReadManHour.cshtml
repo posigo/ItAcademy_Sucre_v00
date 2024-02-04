@@ -1,0 +1,93 @@
+﻿@model Sucre_Models.ManReadM
+@{    
+    Layout = "_Layout";
+    ViewData["Title"] = "Cannales - Points";
+}
+
+<div class="container">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+            <h4 class="text-primary">Manual Read Data Hour Channale</h4>
+        </div>
+
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4 text-end">
+            <a asp-controller="Canal" asp-action="Index" class="btn btn-primary-custom">
+                Back to the list of cannales
+            </a>
+        </div>
+    </div>
+
+    <form method="post" asp-action="ReadManHourPost" enctype="multipart/form-data">
+        @* <input asp-for="Id" hidden /> *@
+        <div class="table-responsive m-0 p-0 alert alert-light">
+            <table class="table table-secondary table-bordered table-striped border-primary table-hover" style="width: 100%">
+                <thead class="">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Hour</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    <tr>
+                        <td>
+                            <div class="row form-floating m-1 p-1   ">
+                                @Html.TextBoxFor(model => model.IdChannale, null, new { @class = "form-control", @type = "text", @id = "idCh" })
+                                @Html.LabelFor(model => model.IdChannale, "Enter Id channale", new { @for = "idCh" })
+                                @Html.ValidationMessageFor(model => model.IdChannale, null, new { @class = "text-danger" })
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row">
+                                <div class="col form-floating m-1 p-1">
+                                    @Html.TextBoxFor(model => model.YearB, null, new { @class = "form-control", @type = "text", @id = "YearB" })
+                                    @Html.LabelFor(model => model.YearB, "Enter year date channale", new { @for = "YearB"})
+                                    @Html.ValidationMessageFor(model => model.YearB, null, new { @class = "text-danger" })
+                                </div>
+                                <div class="col form-floating m-1 p-1">
+                                    @Html.TextBoxFor(model => model.MonthB, null, new { @class = "form-control", @type = "text", @id = "MonthB" })
+                                    @Html.LabelFor(model => model.MonthB, "Enter month date channale", new { @for = "MonthB" })
+                                    @Html.ValidationMessageFor(model => model.MonthB, null, new { @class = "text-danger" })
+                                </div>
+                                <div class="col form-floating m-1 p-1">
+                                    @Html.TextBoxFor(model => model.DayB, null, new { @class = "form-control", @type = "text", @id = "DayB" })
+                                    @Html.LabelFor(model => model.DayB, "Enter day date channale", new { @for = "DayB" })
+                                    @Html.ValidationMessageFor(model => model.DayB, null, new { @class = "text-danger" })
+                                </div>                                
+                            </div>                            
+                        </td>
+                        <td>
+                            <div class="form-floating m-1 p-1">
+                                @Html.TextBoxFor(model => model.Hour, null, new { @class = "form-control", @type = "text", @id = "Hour" })
+                                @Html.LabelFor(model => model.Hour, "Enter hour channale", new { @for = "Hour" })
+                                @Html.ValidationMessageFor(model => model.Hour, null, new { @class = "text-danger" })
+                            </div>
+                        </td>
+
+                        <td>
+                            <input asp-action="ReadManHourPost" asp-route-Id="" asp-route-Add=""
+                                   type="submit" class="btn btn-success w-100 m-1 p-1" value="Read" />
+                        </td>
+
+                    </tr>
+                    
+                        
+                </tbody>
+            </table>
+        </div>
+    </form>
+    @if(Model.Result!="")
+    {
+        <div class="row pt-4 m-0 alert alert-info" role="alert">
+            <p class="text-primary h4">@Model.Result</p>
+        </div>
+    }
+</div>
+
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

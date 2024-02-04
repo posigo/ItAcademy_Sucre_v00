@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Sucre_Models.PointTableM>
+@* @model IEnumerable<Sucre_Models.PointM> *@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Points - Index";
+    ViewData["DisplayOfEmptyList"] = "The list of metering point is empty!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+            <h2 class="text-primary">List Оf Мetering Points</h2>
+        </div>
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4 text-end">
+            <a asp-controller="Point" asp-action="Upsert" class="btn btn-primary-custom">
+                Add metering point
+            </a>
+        </div>
+    </div>
+
+    @if (Model.Count()>0)
+    {
+        <div class="m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Energy</th>
+                        <th>Location</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="5%">@obj.PointM.Id</td>
+                            <td width="30%">@obj.PointM.Name</td>
+                            <td width="15%">@obj.EnergyName</td>
+                            <td width="20%">@obj.CexName</td>
+
+                            <td class="text-center">
+                                <a asp-controller="Point" asp-action="Upsert" asp-route-Id="@obj.PointM.Id" class="btn btn-primary-custom mx-2">
+                                    Edit
+                                </a>
+                                <a asp-controller="Point" asp-action="PointCannalesIndex" asp-route-Id="@obj.PointM.Id" class="btn btn-success mx-2">
+                                    Cannales
+                                </a>
+                                <a asp-controller="Point" asp-action="Delete" asp-route-Id="@obj.PointM.Id" class="btn btn-danger-custom mx-2">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        
+    }   
+    else
+    {
+        @* <div class="row row-cols-auto alert alert-danger" role="alert">
+            <p class="text-danger h4">The list of metering point is empty!</p>
+        </div> *@
+        @*<partial name="_DisplayOfEmptyList" view-data="ViewData" />*@
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+
+    }
+</div>

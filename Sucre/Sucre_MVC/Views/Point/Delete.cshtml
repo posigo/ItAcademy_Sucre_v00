@@ -1,0 +1,84 @@
+﻿@model Sucre_Models.PointTableM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Point - Remove";
+}
+
+<div class="container">
+    <form method="post" asp-action="Delete" enctype="multipart/form-data">
+        <input asp-for="@Model.PointM.Id" hidden>
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">Remove The Metering Point (@Model.PointM.Id.ToString())</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.Name"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="PointM.Name" class="form-control" disabled />
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.Description"></label>
+                            </div>
+                            <div class="col-8">
+                                <textarea asp-for="PointM.Description" class="form-control" disabled></textarea>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="EnergyName"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="EnergyName" class="form-control" disabled />
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="CexName"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="CexName" class="form-control" disabled />
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="PointM.ServiceStaff"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="PointM.ServiceStaff" class="form-control" disabled />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        <input type="submit" class="btn btn-danger w-100" value="Remove" />                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,105 @@
+﻿@using Sucre_Utility
+@model Sucre_Models.AppRoleM
+@{
+    Layout = "_Layout";
+    // if (TempData["FieldIsEmpty"] != null)
+    // {
+    //     <div class="alert alert-danger text-center">
+    //         @TempData["FieldIsEmpty"]
+    //     </div>
+    // }    
+    var title = "";
+    if (Model.Id == null || Model.Id == Guid.Empty)
+    {
+        ViewData["Title"] = "AppRole - Create";
+        title = "Add a new role";
+    }
+    else
+    {
+        ViewData["Title"] = "AppRole - Edit";
+        title = $"Edit role ({Model.Id.ToString()})";
+    }
+
+}
+
+<div class="container">
+    <form method="post" asp-action="UpsertAppRole" enctype="multipart/form-data">
+        @if (Model.Id != null && Model.Id != Guid.Empty)
+        {
+            @Html.HiddenFor(model => model.Id)
+            @* <input asp-for="@Model.Id" hidden> *@
+        }
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">@title</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.IsEdit.Value)
+                            {
+                                @Html.TextBoxFor(model => model.Name,null, new{@class="form-control", @type="text", @id="Name"})
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.Name,null, new{@class="form-control", @type="text", @id="Name", @readonly="readonly"})
+                            }
+                            @Html.LabelFor(model => model.Name, "Enter role name/type", new{@for="Name"})
+                            @Html.ValidationMessageFor(model => model.Name, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @if (Model.IsEdit.Value)
+                            {
+                                @Html.TextBoxFor(model => model.Value,null, new{@class="form-control", @type="text", @id="Value"})                                
+                            }
+                            else
+                            {
+                                @Html.TextBoxFor(model => model.Value,null, new{@class="form-control", @type="text", @id="Value", @readonly="readonly"})
+                            }                            
+                            @Html.LabelFor(model => model.Value, "Enter role value", new{@for="Value"})
+                            @Html.ValidationMessageFor(model => model.Value, null, new{@class="text-danger"})
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @if (Model.Id != null && Model.Id != Guid.Empty)
+                        {
+                            if (Model.IsEdit.Value)
+                            {
+                                <input type="submit" class="btn btn-success w-100" value="Update" />
+                            }
+                            else
+                            {
+                                <input type="submit" class="btn btn-success w-100" value="Update" disabled="disabled" />
+                            }
+                            @* var qw = User.Claims.FirstOrDefault(i => i.Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/role").Value.ToString(); *@                            
+                        }
+                        else
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Create" />    
+                        }                        
+                    </div>
+                    <div class="col">
+                        <a asp-controller="AppUser" asp-action="ListAppRole" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,192 @@
+﻿@model Sucre_Models.CanalUpsertM
+@{
+    Layout = "_Layout";
+    var title = "";
+    if (Model.CanalM.Id == 0)
+    {
+        ViewData["Title"] = "Canal - Create";
+        title = "Adding Canal";
+    }
+    else
+    {
+        ViewData["Title"] = "Canal - Edit";
+        title = $"Edit Canal ({Model.CanalM.Id.ToString()})";
+    }
+}
+
+<div class="container-fluid">
+    <form method="post" asp-action="Upsert" enctype="multipart/form-data">
+        @if (Model.CanalM.Id !=0)
+        {
+            @Html.HiddenFor(model => model.CanalM.Id)            
+        }
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">                
+                <h2 class="text-primary-custom pl-3">@title</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.CanalM.Name,null, new{@class="form-control", @type="text", @id="Name"})
+                            @Html.LabelFor(model => model.CanalM.Name, "Enter channel name", new{@for="Name"})
+                            @Html.ValidationMessageFor(model => model.CanalM.Name, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextAreaFor(model => model.CanalM.Description, 0, 1, new{@class="form-control", @type="text", @id="Description"})
+                            @Html.LabelFor(model => model.CanalM.Description, "Enter channel description", new{@for="Description"})
+                            @Html.ValidationMessageFor(model => model.CanalM.Description, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.DropDownListFor(model => model.CanalM.ParameterTypeId, Model.ParametryTypeSelectList, null,
+                                                new{@class="form-select", @id="ParameterTypeId"})                            
+                            @Html.LabelFor(model => model.CanalM.ParameterTypeId, "Select the channel parameter type", new{@for="ParameterTypeId"})
+                            @Html.ValidationMessageFor(model => model.CanalM.ParameterTypeId, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-check form-switch mb-3 py-2 border border-1 rounded-2">
+                            @*<input asp-for="CanalM.Reader" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">*@
+                            @*<label asp-for="CanalM.Reader" class="form-check-label" for="flexSwitchCheckDefault">Ввод флажка переключателя по умолчанию</label>*@
+                            @Html.CheckBoxFor(model => model.CanalM.Reader, new{@class="form-check-input", @type="checkbox", @role="switch", @id="Reader"})
+                            @Html.LabelFor(model => model.CanalM.Reader, "The channel is working", new{@for="Reader"})
+                            @Html.ValidationMessageFor(model => model.CanalM.Reader, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.CanalM.SourceType,null, new{@class="form-control", @type="number", @id="SourceType", @min="0", @max="2"})
+                            @Html.LabelFor(model => model.CanalM.SourceType, "Channel source type (0 -- device, 1 -- calculated, 2 -- manual)", new{@for="SourceType"})
+                            @Html.ValidationMessageFor(model => model.CanalM.SourceType, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-check form-switch mb-3 py-2 border border-1 rounded-2">
+                            @Html.CheckBoxFor(model => model.CanalM.AsPazEin, new{@class="form-check-input", @type="checkbox", @role="switch", @id="AsPazEin"})
+                            @Html.LabelFor(model => model.CanalM.AsPazEin, "AaPaz is used", new{@for="AsPazEin"})
+                            @Html.ValidationMessageFor(model => model.CanalM.AsPazEin, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-check form-switch mb-3 py-2 border border-1 rounded-2">
+                            @Html.CheckBoxFor(model => model.CanalM.Hour, new { @class = "form-check-input", @type = "checkbox", @role = "switch", @id = "Hour" })
+                            @Html.LabelFor(model => model.CanalM.Hour, "Hour read", new { @for = "Hour" })
+                            @Html.ValidationMessageFor(model => model.CanalM.Hour, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row form-check form-switch mb-3 py-2 border border-1 rounded-2">
+                            @Html.CheckBoxFor(model => model.CanalM.Day, new { @class = "form-check-input", @type = "checkbox", @role = "switch", @id = "Day" })
+                            @Html.LabelFor(model => model.CanalM.Day, "Day read", new { @for = "Day" })
+                            @Html.ValidationMessageFor(model => model.CanalM.Day, null, new { @class = "text-danger" })
+                        </div>
+                        <div class="row form-check form-switch mb-3 py-2 border border-1 rounded-2">
+                            @Html.CheckBoxFor(model => model.CanalM.Month, new { @class = "form-check-input", @type = "checkbox", @role = "switch", @id = "Mounth" })
+                            @Html.LabelFor(model => model.CanalM.Month, "Month read", new { @for = "Month" })
+                            @Html.ValidationMessageFor(model => model.CanalM.Month, null, new { @class = "text-danger" })
+                        </div>
+@*
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CanalM.Name, null, null)
+                                 <label asp-for="CanalM.Name"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.CanalM.Name,null, new{@class="form-control"})
+                                 <input asp-for="CanalM.Name" class="form-control" /> 
+                                @Html.ValidationMessageFor(model => model.CanalM.Name, null, new{@class="text-danger"})
+                                 <span asp-validation-for="CanalM.Name" class="text-danger"></span> 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CanalM.Description, null, null)
+                                 <label asp-for="CanalM.Description"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextAreaFor(model => model.CanalM.Description, 0, 1, new{@class="form-control"})
+                                 <textarea asp-for="CanalM.Description" class="form-control"></textarea> 
+                                @Html.ValidationMessageFor(model => model.CanalM.Description, null, new{@class="text-danger"})
+                                 <span asp-validation-for="CanalM.Description" class="text-danger"></span> 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CanalM.ParameterTypeId, null, null)
+                                 <label asp-for="CanalM.ParameterTypeId"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.DropDownListFor(model => model.CanalM.ParameterTypeId,
+                                            Model.ParametryTyoeSelectList, 
+                                            null, 
+                                            new{@class="form-select"})
+                                 <select asp-for="CanalM.ParameterTypeId" asp-items="@Model.ParametryTyoeSelectList" class="form-select">
+                                    <option disabled selected>--Select energy type--</option>
+                                </select>                             
+                                @Html.ValidationMessageFor(model => model.CanalM.ParameterTypeId, null, new{@class="text-danger"})
+                                 <span asp-validation-for="CanalM.ParameterTypeId" class="text-danger"></span> 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CanalM.Reader, null, null)
+                                 <label asp-for="CanalM.Reader"></label> 
+                            </div>
+                            <div class="col-8">                                
+                                @Html.CheckBoxFor(model => model.CanalM.Reader, new{@class="form-check form-check-input"})
+                                <input type="checkbox" asp-for="CanalM.Reader" class="form-check form-check-input"/> 
+                                @Html.ValidationMessageFor(model => model.CanalM.Reader, null, new{@class="text-danger"})
+                                <span asp-validation-for="CanalM.Reader" class="text-danger"></span> 
+                            </div>
+                        </div>                                              
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CanalM.SourceType, null, null)
+                                 <label asp-for="CanalM.SourceType"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.CanalM.SourceType, null,
+                                new{@class="form-control", @type="number", @max="2", @min="0"})
+                                 <input type="number" min="0" max="2" asp-for="CanalM.SourceType" class="form-control form-range" /> 
+                                @Html.ValidationMessageFor(model => model.CanalM.SourceType, null, new{@class="text-danger"})
+                                 <span asp-validation-for="CanalM.SourceType" class="text-danger"></span> 
+                                 <input type="text" readonly="readonly" value="8uhn" /> 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CanalM.AsPazEin, null, null)
+                                <label asp-for="CanalM.AsPazEin"></label>
+                            </div>
+                            <div class="col-8">
+                                @Html.CheckBoxFor(model => model.CanalM.AsPazEin, new{@class="form-check form-check-input"})
+                                 <input type="checkbox" asp-for="CanalM.AsPazEin" class="form-check form-check-input" /> 
+                                @Html.ValidationMessageFor(model => model.CanalM.AsPazEin, null, new{@class="text-danger"})
+                                <span asp-validation-for="CanalM.AsPazEin" class="text-danger"></span>
+                            </div>
+                        </div>
+*@
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @if (Model.CanalM.Id !=0)
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Update" />
+                        }
+                        else
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Create" />    
+                        }                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,118 @@
+﻿@model Sucre_Models.ParameterTypeM
+@{
+    Layout = "_Layout";
+    var title = "";
+    if (Model.Id == 0)
+    {
+        ViewData["Title"] = "Parameter Type - Create";
+        title = "Add Parameter Type";
+    }
+    else
+    {
+        ViewData["Title"] = "Parameter Type - Create";
+        title = $"Edit Parameter Type ({Model.Id.ToString()})";
+    }
+
+}
+
+<div class="container">
+    <form method="post" asp-action="Upsert" enctype="multipart/form-data" class="">
+        @if (Model.Id !=0)
+        {
+            <input asp-for="@Model.Id" hidden>
+        }
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">@title</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.Name,null, new{@class="form-control", @type="text", @id="Name"})
+                            @Html.LabelFor(model => model.Name, "Enter the name of the type parameter", new{@for="Name"})
+                            @Html.ValidationMessageFor(model => model.Name, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.Mnemo, null, new{@class="form-control", @type="text", @id="Mnemo"})
+                            @Html.LabelFor(model => model.Mnemo, "Enter the code mnemonic of the type parameter", new{@for="Mnemo"})
+                            @Html.ValidationMessageFor(model => model.Mnemo, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.UnitMeas,null, new{@class="form-control", @type="text", @id="UnitMeas"})
+                            @Html.LabelFor(model => model.UnitMeas, "Enter the unit meassure of the type parameter", new{@for="UnitMeas"})
+                            @Html.ValidationMessageFor(model => model.UnitMeas, null, new{@class="text-danger"})
+                        </div>
+@*
+                        <div class="row py-2"> 
+                            <div class="col-4">                                
+                                @Html.LabelFor(model => model.Name,null,null)
+                                 <label asp-for="Name"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Name,null, new{@class="form-control"})
+                                <input asp-for="Name" class="form-control" />
+                                 @Html.ValidationMessage("Name",null,"text-danger") 
+                                @Html.ValidationMessageFor(model => model.Name, null, new{@class="text-danger"},"div")
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Mnemo,null,null)
+                                 <label asp-for="Mnemo"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Mnemo,null, new{@class="form-control"})
+                                 <input asp-for="Mnemo" class="form-control" /> 
+                                @Html.ValidationMessageFor(model => model.Mnemo, null, new{@class="text-danger"})
+                                 <span asp-validation-for="Mnemo" class="text-danger"></span> 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.UnitMeas,null,null)
+                                 <label asp-for="UnitMeas"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.UnitMeas,null, new{@class="form-control"})
+                                 <input asp-for="UnitMeas" class="form-control" /> 
+                                @Html.ValidationMessageFor(model => model.UnitMeas, null, new{@class="text-danger"})
+                                 <span asp-validation-for="UnitMeas" class="text-danger"></span> 
+                            </div>
+                        </div>*@
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @if (Model.Id !=0)
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Update" />
+                        }
+                        else
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Create" />    
+                        }                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

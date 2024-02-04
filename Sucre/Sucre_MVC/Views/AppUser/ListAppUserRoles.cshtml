@@ -1,0 +1,68 @@
+﻿@model Sucre_Models.AppUserRolesM
+@{    
+    Layout = "_Layout";
+    ViewData["Title"] = "App user - app roles";
+}
+
+<div class="container">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-8 col-sm-6 col-md-8 col-lg-10">
+            <h5 class="text-primary">Linking app roles to a user with Id = <small>@Model.Id: "@Model.Email"</small></h5>
+        </div>
+        
+        <div class="col-4 col-sm-6 col-md-4 col-lg-2 text-end">
+            <a asp-controller="AppUser" asp-action="ListAppUser" class="btn btn-primary-custom">
+                Back to the list of users
+            </a>
+        </div>
+    </div>
+
+    <form method="post" asp-action="ListAppUserRolesDelete" enctype="multipart/form-data">
+        <input asp-for="Id" hidden />
+        <div class="table-responsive m-0 p-0 alert alert-light">
+            <table class="table table-secondary table-bordered table-striped border-primary table-hover" style="width: 100%">
+                <thead class="">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Value</th>                        
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @if (Model.AppRolesM.Count > 0)
+                    {
+                        for (int i = 0; i<Model.AppRolesM.ToList().Count(); i++) @*   each (var cannale in Model.CannalesM) *@
+                        {
+                            <tr>
+                                <td scope="col" width="30%">@Model.AppRolesM.ToList()[i].Id</td>
+                                <td scope="col" width="20%">@Model.AppRolesM.ToList()[i].Name</td>
+                                <td scope="col" width="20%">@Model.AppRolesM.ToList()[i].Value</td>
+                                
+                                <td scope="col">
+                                    <input asp-for="@Model.AppRolesM.ToList()[i].Id" hidden />
+                                    <input asp-action="ListAppUserRolesDelete" asp-route-Id="@Model.Id" asp-route-IdAppRole="@Model.AppRolesM.ToList()[i].Id"
+                                    type="submit" class="btn btn-danger-custom w-100" value="Delete" />                                    
+                                </td>
+                                
+                            </tr>
+                        }
+                    }
+
+                    <tr>
+                        <td scope="col" colspan="3" width="80%">
+                            <select asp-for="AddRole" asp-items="@Model.FreeAppRolesSelectList" class="form-select">
+                                <option disabled selected>--Select app role--</option>
+                            </select>
+                            <span asp-validation-for="AddRole" class="text-danger"></span>
+                        </td>
+                        <td>                           
+                            <input asp-action="ListAppUserRolesAdding" asp-route-Id="@Model.Id" asp-route-Add="@Model.AddRole"
+                                type="submit" class="btn btn-success w-100" value="Add" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+</div>

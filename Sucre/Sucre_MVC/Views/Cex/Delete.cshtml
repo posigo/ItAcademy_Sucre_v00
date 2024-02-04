@@ -1,0 +1,109 @@
+﻿@model Sucre_Models.CexM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Cex - Remove";
+}
+
+<div class="container">
+    <form method="post" asp-action="Delete" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.Id)
+        @* <input asp-for="@Model.Id" hidden>         *@
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">Remove the location of a metering point (@Model.Id.ToString())</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row py-2 visually-hidden-focusable">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Management, null, null)
+                                @* <label asp-for="Management"></label> *@
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Management, null, new{@class="form-control", @readonly="readonly"})
+                                @* <input asp-for="Management" class="form-control" disabled />                                 *@
+                            </div>
+                        </div>
+                        <div class="row py-2 visually-hidden">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.CexName, null, null)
+                                @* <label asp-for="CexName"></label> *@
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.CexName, null, new{@class="form-control", @readonly="readonly"})
+                                @* <input asp-for="CexName" class="form-control" disabled />                                 *@
+                            </div>
+                        </div>
+                        <div class="row py-2 visually-hidden">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Area, null, null)
+                                @* <label asp-for="Area"></label> *@
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Area, null, new{@class="form-control", @readonly="readonly"})
+                                @* <input asp-for="Area" class="form-control" disabled /> *@
+                            </div>
+                        </div>
+                        <div class="row py-2 visually-hidden">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Device, null, null)
+                                @* <label asp-for="Device"></label> *@
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Device, null, new{@class="form-control", @readonly="readonly"})
+                                @* <input asp-for="Device" class="form-control" disabled /> *@
+                            </div>
+                        </div>
+                        <div class="row py-2 visually-hidden">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Location, null, null)
+                                @* <label asp-for="Location"></label> *@
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Location, null, new{@class="form-control", @readonly="readonly"})
+                                @* <input asp-for="Location" class="form-control" disabled /> *@
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.FullName, "Metering point location", null)
+                                @* <label asp-for="Location"></label> *@
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.FullName, null, new{@class="form-control", @disabled="disabled"})
+                                @* <input asp-for="Location" class="form-control" disabled /> *@
+                            </div>
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.FullName,null, new{@class="form-control", @type="text", @id="FullName", @disabled="disabled"})
+                            @Html.LabelFor(model => model.Management, "Enter the name of the management department", new{@for="FullName"})
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        <input type="submit" class="btn btn-danger w-100" value="Remove" />                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    if (TempData["InitDb"] != null && TempData["InitDb"].ToString().Trim() !="")
+    {
+        if (TempData["InitDb"] != "Ok")
+        {
+            <div class="alert alert-danger text-center">
+                @TempData["InitDb"]
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-success text-center">
+                The database tables have been initialized. The procedure was completed successfully
+            </div>
+        }
+    }
+}
+
+<div class="container-fluid">
+    @*<div class="row bg-info">
+        <div class="col text-center">
+            <h1 class="display-4 fw-bold">С У К Р Э</h1>
+        </div>
+        
+    </div>*@
+    @* <a asp-action="MethodForActionFilter">MethodForActionFilter</a>
+    <a asp-controller="AppUser" asp-action="AppUserRegister">Register</a> *@
+   @*  @if (User.Identity.IsAuthenticated)
+    {
+        <a asp-controller="AppUser" asp-action="ListAppRole">ListAppRole</a>
+        <a asp-controller="AppUser" asp-action="ListAppUser">ListAppUser</a>
+    } *@
+    @* <a asp-controller="AppUser" asp-action="ListAppRoleUsers" asp-route-Id="5b27af99-42ee-4b14-8c68-a75dee744215">Listgfdfgdfg</a>
+    <a asp-controller="AppUser" asp-action="ListAppRoleUsers" asp-route-Id="5b27af99-42ee-4b14-8c68-a75dee744215">Listgfdfgdfg</a>
+     *@    
+    <div class="row text-center m-2">
+        <div class="col col-sm-4 col-md-3 col-lg-2">
+            <div class="accordion accordion-flush border border-2" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed py-0" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Users and passwords
+                        </button>                        
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body text-start py-0">
+                            <small>admin@admin.him->admin</small>
+                            <small>user@user.him->user</small>
+                            <small class="fw-bold">Supervisor@xx.xx->Supervisor</small>                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="col col-sm-4 col-md-6 col-lg-8">
+            <img src="~/images/Sukred.png" class="img-fluid img-thumbnail" />            
+        </div>
+        <div class="col col-sm-4 col-md-3 col-lg-2">
+            <a asp-controller="Home" asp-action="InitDbData" class="link-danger text-decoration-none" title="Initializing the database with initial values">
+                <p class="h6 alert alert-danger text-capitalize">init database tables</p>
+                @* <p class="h4 text-dark text-decoration-underline alert alert-warning"></p> *@
+            </a>
+        </div>
+    </div>
+    @* <a asp-controller="Point" asp-action="PointCannalesIndex" asp-route-Id="1">
+        <p class="h1 display-1">Point Id-1 Canals</p>
+    </a> *@
+        
+</div>
+
+

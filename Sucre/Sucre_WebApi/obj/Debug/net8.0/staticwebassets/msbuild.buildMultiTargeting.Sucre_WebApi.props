@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Sucre_WebApi.props" />
+</Project>

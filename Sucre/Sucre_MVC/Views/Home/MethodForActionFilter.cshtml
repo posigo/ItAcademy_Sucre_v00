@@ -1,0 +1,43 @@
+﻿@model Sucre_MVC.Filters.ModelForActionFilter
+@{
+    ViewData["Title"] = "MethodForActionFilter";
+
+}
+
+<div class="container-fluid">
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="MethodForActionFilter">
+        <div class="row row-cols-6 row-cols-auto">
+            <div class="col col-12 col-auto">
+                <div class="row form-floating">
+                    @Html.TextBoxFor(model => model.Id, null, new{@class="form-control", type="text", @id="forId", @readonly="readonly"})
+                    @Html.LabelFor(model => model.Id, "Id user", new{@for="forId"})                                        
+                </div>
+                <div class="row form-floating">
+                    <input asp-for="Name" type="text" class="form-control" id="forName" />
+                    <label asp-for="Name" for="forName"></label>
+                </div>
+                <div class="row form-floating">
+                    <input asp-for="Email" type="text" class="form-control" id="forEmail" />
+                    <label asp-for="Email" for="forEmail"></label>
+                    <span asp-validation-for="Email"></span>
+                </div>
+                <div class="row form-floating">
+                    @Html.TextBoxFor(model => model.Password, null, new{@class="form-control", type="text", @id="forPass"})
+                    @Html.LabelFor(model => model.Password, "Enter Password", new{@for="forPass"})
+                    @Html.ValidationMessageFor(model => model.Password, null, new{@class="text-danger"})
+                </div>
+                <div class="row form-floating">
+                    @Html.TextBoxFor(model => model.PasswordConfirmation, null, new{@class="form-control", type="text", @id="forConf"})
+                    @Html.LabelFor(model => model.PasswordConfirmation, "Confirmation Password", new{@for="forConf"})
+                    @Html.ValidationMessageFor(model => model.PasswordConfirmation, null, new{@class="text-danger"})
+                </div>
+                <div class="row">
+                    <input type="submit" class="btn btn-success w-100" value="Record" />
+                </div>
+            </div> 
+        </div>
+    </form>
+        
+</div>
+
+

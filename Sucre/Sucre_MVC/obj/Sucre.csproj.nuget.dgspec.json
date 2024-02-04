@@ -1,0 +1,612 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre\\Sucre.csproj": {}
+  },
+  "projects": {
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre\\Sucre.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre\\Sucre.csproj",
+        "projectName": "Sucre",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre\\Sucre.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Services\\Sucre_Services.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Services\\Sucre_Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.8.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.8.0, )"
+            },
+            "LinqKit.Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.1.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Sinks.Debug": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj",
+        "projectName": "Sucre_Core",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Serilog.Sinks.Debug": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj",
+        "projectName": "Sucre_DataAccess",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Utility\\Sucre_Utility.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Utility\\Sucre_Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.14, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Mappers\\Sucre_Mappers.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Mappers\\Sucre_Mappers.csproj",
+        "projectName": "Sucre_Mappers",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Mappers\\Sucre_Mappers.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Mappers\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Riok.Mapperly": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj",
+        "projectName": "Sucre_Models",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\Sucre_Models.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.ViewFeatures": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Services\\Sucre_Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Services\\Sucre_Services.csproj",
+        "projectName": "Sucre_Services",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Services\\Sucre_Services.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Core\\Sucre_Core.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_DataAccess\\Sucre_DataAccess.csproj"
+              },
+              "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Mappers\\Sucre_Mappers.csproj": {
+                "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Mappers\\Sucre_Mappers.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "LinqKit.Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Utility\\Sucre_Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Utility\\Sucre_Utility.csproj",
+        "projectName": "Sucre_Utility",
+        "projectPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Utility\\Sucre_Utility.csproj",
+        "packagesPath": "C:\\Users\\posig\\.nuget\\packages\\",
+        "outputPath": "C:\\Projects\\ItAcademy\\Sukre-v00\\Sucre\\Sucre_Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\posig\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

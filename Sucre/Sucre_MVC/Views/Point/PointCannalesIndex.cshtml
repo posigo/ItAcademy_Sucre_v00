@@ -1,0 +1,65 @@
+﻿@model Sucre_Models.PointCannalesM
+@{    
+    Layout = "_Layout";
+    ViewData["Title"] = "Points - Cannales";
+}
+
+<div class="container">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+            <h4 class="text-primary">Linking channels to a metering point with Id = @Model.Id: "@Model.Name"</h4>
+        </div>
+
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4 text-end">
+            <a asp-controller="Point" asp-action="Index" class="btn btn-primary-custom">
+                Back to the list of metering points
+            </a>
+        </div>
+    </div>
+
+    <form method="post" asp-action="PointCannalesDelete" enctype="multipart/form-data">
+        <input asp-for="Id" hidden />
+        <div class="table-responsive m-0 p-0 alert alert-light">
+            <table class="table table-secondary table-bordered table-striped border-primary table-hover" style="width: 100%">
+                <thead class="">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody class="">
+                    @if (Model.CannalesM.Count() > 0)
+                    {
+                        for (int i = 0; i<Model.CannalesM.ToList().Count(); i++) @*   each (var cannale in Model.CannalesM) *@
+                        {
+                            <tr>
+                                <td scope="col" width="10%">@Model.CannalesM.ToList()[i].Id</td>
+                                <td scope="col" width="70%">@Model.CannalesM.ToList()[i].Name</td>
+                                <td scope="col">
+                                    <input asp-for="@Model.CannalesM.ToList()[i].Id" hidden />
+                                    <input asp-action="PointCannalesDelete" asp-route-Id="@Model.Id" asp-route-IdCannale="@Model.CannalesM.ToList()[i].Id"
+                                           type="submit" class="btn btn-danger-custom w-100" value="Delete" />                                    
+                                </td>
+                                
+                            </tr>
+                        }
+                    }
+
+                    <tr>
+                        <td scope="col" colspan="2" width="80%">
+                            <select asp-for="AddCannale" asp-items="@Model.FreeCanalesSelectList" class="form-select">
+                                <option disabled selected>--Select cannale--</option>
+                            </select>
+                            <span asp-validation-for="AddCannale" class="text-danger"></span>
+                        </td>
+                        <td>                           
+                            <input asp-action="PointCannalesAdding" asp-route-Id="@Model.Id" asp-route-Add="@Model.AddCannale"
+                                                               type="submit" class="btn btn-success w-100" value="Add" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+
+</div>

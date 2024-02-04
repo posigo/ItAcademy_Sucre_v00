@@ -1,0 +1,163 @@
+﻿@model IEnumerable<AsPazCanalM>
+@* @model ICollection<AsPazCanalM> *@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Canals.AsPaz - Index";
+    ViewData["DisplayOfEmptyList"] = "No channels from AsPaz!";
+}
+
+<div class="container p-3 bg-white">
+    <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+            <h2 class="text-primary">Channel AsPaz List</h2>
+        </div>
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4 text-end">
+            <a asp-controller="Canal" asp-action="Index" class="btn btn-primary-custom">
+                Go to the list of channels
+            </a>
+        </div>
+    </div>
+
+    @if (Model.Count()>0)
+    {
+        <div class="m-0 p-0 alert alert-light table-responsive">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead valign="middle">
+                    <tr>
+                        <th rowspan="2" valign="middle">IdCan (Id)</th>
+                        <th rowspan="2" valign="middle">Name Canal</th>
+                        <th rowspan="2" valign="middle">High</th>
+                        <th rowspan="2" valign="middle">Low</th>
+                        <th colspan="3">Alarm High</th>
+                        <th colspan="3">Warn High</th>
+                        <th colspan="3">Warn Low</th>
+                        <th colspan="3">Alarm Low</th>
+                        <th rowspan="2"></th>
+                    </tr>
+                    <tr>
+                        <th>In Use</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                        <th>In Use</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                        <th>In Use</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                        <th>In Use</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="">@obj.AsPazM.CanalId (@obj.AsPazM.Id)</td>
+                            <td width="">@obj.CanalName</td>
+                            <td width="">@obj.AsPazM.High</td>
+                            <td width="">@obj.AsPazM.Low</td>
+                            @if (!obj.AsPazM.A_HighEin)
+                            {
+                                <td width="">NO</td>
+                                <td width="">Non</td>
+                                <td width="">Non</td>
+                            }
+                            else
+                            {
+                                <td width="">YES</td>
+                                if (!obj.AsPazM.A_HighType)
+                                {
+                                    <td width="">Number</td>
+                                    <td width="">@obj.AsPazM.A_High</td>
+                                }
+                                else
+                                {
+                                    <td width="">Precent</td>
+                                    <td width="">@obj.AsPazM.A_High %</td>
+                                }
+                            }
+                            @if (!obj.AsPazM.W_HighEin)
+                            {
+                                <td width="">NO</td>
+                                <td width="">Non</td>
+                                <td width="">Non</td>
+                            }
+                            else
+                            {
+                                <td width="">YES</td>
+                                if (!obj.AsPazM.W_HighType)
+                                {
+                                    <td width="">Number</td>
+                                    <td width="">@obj.AsPazM.W_High</td>
+                                }
+                                else
+                                {
+                                    <td width="">Precent</td>
+                                    <td width="">@obj.AsPazM.W_High %</td>
+                                }
+                            }
+                            @if (!obj.AsPazM.W_LowEin)
+                            {
+                                <td width="">NO</td>
+                                <td width="">Non</td>
+                                <td width="">Non</td>
+                            }
+                            else
+                            {
+                                <td width="">YES</td>
+                                if (!obj.AsPazM.W_LowEin)
+                                {
+                                    <td width="">Number</td>
+                                    <td width="">@obj.AsPazM.W_Low</td>
+                                }
+                                else
+                                {
+                                    <td width="">Precent</td>
+                                    <td width="">@obj.AsPazM.W_Low %</td>
+                                }
+                            }
+                            @if (!obj.AsPazM.A_LowEin)
+                            {
+                                <td width="">NO</td>
+                                <td width="">Non</td>
+                                <td width="">Non</td>
+                            }
+                            else
+                            {
+                                <td width="">YES</td>
+                                if (!obj.AsPazM.A_LowType)
+                                {
+                                    <td width="">Number</td>
+                                    <td width="">@obj.AsPazM.A_Low</td>
+                                }
+                                else
+                                {
+                                    <td width="">Precent</td>
+                                    <td width="">@obj.AsPazM.A_Low %</td>
+                                }
+                            }
+
+                            <td class="text-center w-auto">
+                                <a asp-controller="Canal" asp-action="UpsertAsPaz" asp-route-Id="@obj.AsPazM.Id" asp-route-canalId="@obj.AsPazM.CanalId" asp-route-canalName="@obj.CanalName" class="btn btn-primary-custom m-auto">
+                                    Edit
+                                </a>
+                                <a asp-controller="Canal" asp-action="DeleteAsPaz" asp-route-Id="@obj.AsPazM.Id" class="btn btn-danger-custom m-auto">
+                                    Del
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>        
+    }   
+    else
+    {
+        @* <div class="row row-cols-auto alert alert-danger" role="alert">
+            <p class="text-danger h4">No channels from AsPaz!</p>
+        </div> *@
+        @*<partial name="_DisplayOfEmptyList" view-data="ViewData" />*@
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+    }
+</div>

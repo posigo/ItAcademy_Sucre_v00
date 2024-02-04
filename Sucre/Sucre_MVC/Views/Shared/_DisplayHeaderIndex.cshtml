@@ -1,0 +1,19 @@
+﻿@{
+    Dictionary<string, string> dictionary = (Dictionary<string, string>)ViewData["HeaderTable"];
+    
+}
+
+
+<div class="row pt-4 m-0 alert alert-primary">
+    <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+        <h2 class="text-primary">@dictionary["Head"]</h2>
+    </div>
+    @if (User.IsInRole(WC.AdminRole) || User.IsInRole(WC.SupervisorPolicy))
+    {
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4 text-end">
+            <a asp-controller="@dictionary["Controller"]" asp-action="@dictionary["Action"]" class="btn btn-primary-custom">
+                @dictionary["Caption"]
+            </a>
+        </div>
+    }
+</div>

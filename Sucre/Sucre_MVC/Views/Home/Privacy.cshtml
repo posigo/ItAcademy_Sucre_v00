@@ -1,0 +1,235 @@
+﻿@{
+    //ViewData["Title"] = "Privacy Policy";
+    ViewData["Title"] = "About The Application";
+
+}
+<h1>@ViewData["Title"]</h1>
+
+@* <p>Use this page to detail your site's privacy policy.</p> *@
+<div class="container-fluid">
+    <p class="alert alert-primary h4" role="alert">
+        <strong>Subject course:</strong> Industrial software development on ASP.Net (
+        <a class="link-primary alert-link" href="https://www.grodno.it-academy.by/course/asp-net-developer/" 
+            target="_blank">
+            IT-Academy
+        </a>)
+    </p>
+    <p class="alert alert-success h4" role="alert"><strong>Course student:</strong> Postnik Igor</p>
+    <p class="alert alert-success h4" role="alert"><strong>Email:</strong>
+        <a class="link-primary alert-link" href="mailto:posigo@gmail.gom" target="_blank">posigo@gmail.gom</a>
+    </p>
+    <p class="alert alert-secondary h4" role="alert"><strong>Project topic:</strong> СУКРЭ</p>
+    <p class="alert alert-secondary h4" role="alert">
+        <strong>Link to the project:</strong> Git (branch: main)
+        <a class="link-primary alert-link" href="https://github.com/posigo/ItAcademy_Sucre.git" target="_blank">
+            https://github.com/posigo/ItAcademy_Sucre.git
+        </a>
+    </p>
+
+    <div class="">
+
+    </div>
+    <p class="h5 text-body">
+        Пример элемента с утилитами
+    </p>
+    <p class="h5 text-body-emphasis">
+        Пример элемента с утилитами
+    </p>
+    <p class="h5 text-body-secondary">
+        Пример элемента с утилитами
+    </p>
+    <p class="h5 text-body-tertiary">
+        Пример элемента с утилитами
+    </p>
+</div>
+
+<div id="idscr">
+    <p>set</p>
+    <strong>set</strong>
+</div>
+
+<div id="idscr2">
+    <p>test</p>
+    <strong>ttttttyyyyy</strong>
+</div>
+
+
+<div id="liveAlertPlaceholder"></div>
+<button type="button" class="btn btn-primary" id="liveAlertBtn">Показать живое уведомление</button>
+
+<div>
+    <button class="btn btn-success" onclick="logout()">
+        button
+    </button>
+</div>
+<div>
+    <button class="btn btn-success" onclick="slowR()">
+        slow
+    </button>
+    <button class="btn btn-secondary" onclick="fastR()">
+        fast
+    </button>
+    <button class="btn btn-dark" onclick="chcolor()">
+        h1 color
+    </button>
+</div>
+
+<div class="container p-2 m-2">
+    <div class="row">
+        <div class="col col-12 col-md-8 col-sm-6">
+            <a href="#" class="nav-item nav-link link-danger fw-bold"
+               @* data-bs-toggle="modal" data-bs-target="#modalLoginPr" *@
+            onclick="loginPr()"><h1>login</h1></a>
+            <a href="#modal1" class="nav-item nav-link link-danger fw-bold"
+            data-bs-toggle="modal" data-bs-target="#modal1"
+               @* onclick="loginPr()" *@><h1>login</h1></a>
+            <a href="#" class="nav-item nav-link link-success fw-bold"
+               onclick="loginLayout()"><h1>LOGIN</h1></a>
+
+        </div>
+    </div>
+
+</div>
+
+@* <!-- Кнопка-триггер модального окна -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Запустить модальное окно со статическим фоном
+</button> *@
+
+<!-- Модальное окно -->
+<div class="modal fade" id="modalLoginPr" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Заголовок модального окна</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Понял</button>
+            </div>
+        </div> 
+    </div>
+</div>
+
+<div class="modal fade" tabindex="-1" id="modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Заголовок модального окна</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <p>Здесь идет основной текст модального окна</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Сохранить изменения</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/samples.js" asp-append-version="true"></script>
+    <script>
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div')
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>',
+                '</div>'
+            ].join('')
+
+            alertPlaceholder.append(wrapper)
+        }
+
+        const alertTrigger = document.getElementById('liveAlertBtn')
+        if (alertTrigger) {
+            alertTrigger.addEventListener('click', () => {
+                appendAlert('Nice, you triggered this alert message!\r\n fdsfdsf\n\reqwewqee', 'success')
+               
+            })
+        }
+    </script>
+    <script>
+        document.body.style.background = "red";
+        setTimeout(() => document.body.style.background = "", 1000);
+        // alert(window.innerHeight);
+        let cNod = document.getElementById('idscr');
+        // for (let node in cNod.childNodes) {
+        //     alert(node);
+        // }
+        cNod.style.background = 'blue';
+
+        function chcolor() {
+            const mmesage = "Are you sure?";
+            var result = confirm(mmesage);
+            if (result) {
+                var h1Tag = document.getElementsByTagName('h1')[0];
+                if (h1Tag) {
+                    h1Tag.style.color = "red";
+                }
+            }
+        }
+        
+
+    </script>
+    <script>
+        function slowR() {
+            function getMaxSubSum(arr) {
+                let maxSum = 0;
+                for (let i = 0; i < arr.length; i++) {
+                    let sumFixedStart = 0;
+                    for (let j = i; j < arr.length; j++) {
+                        sumFixedStart += arr[j];
+                        maxSum = Math.max(maxSum, sumFixedStart);
+                    }
+                }
+                return maxSum;
+            }
+            alert(getMaxSubSum([-1, 2, 3, -9]));
+            alert(getMaxSubSum([-1, 2, 3, -9, 11]));
+            alert(getMaxSubSum([2, -1, 1, 2]));
+            alert(getMaxSubSum([1, 2, 3]));
+            alert(getMaxSubSum([100, -9, 2, -3, 5]));
+        }
+        function fastR() {
+            function getMaxSubSum2(arr) {
+                let maxSum = 0;
+                let partialSum = 0;
+                for (let item of arr) {
+                    partialSum += item;
+                    maxSum = Math.max(maxSum, partialSum);
+                    if (partialSum < 0) partialSum = 0;
+                }
+                return maxSum;
+            }
+            alert(getMaxSubSum2([-1, 2, 3, -9]));
+            alert(getMaxSubSum2([-1, 2, 3, -9, 11]));
+            alert(getMaxSubSum2([2, -1, 1, 2]));
+            alert(getMaxSubSum2([1, 2, 3]));
+            alert(getMaxSubSum2([100, -9, 2, -3, 5]));
+            alert(getMaxSubSum2([-1, -2, -3]));
+            alert(getMaxSubSum2([-1, 2, -3]));
+            alert(getMaxSubSum2([1, -2, 3]))
+        }
+
+        function llll() {
+            //const myModal = new bootstrap.Modal(document.getElementById('modal1'));
+            // or
+            const myModal = new bootstrap.Modal('#modal1');
+            myModal.toggle();
+        }
+    </script>
+   
+        
+    
+
+}

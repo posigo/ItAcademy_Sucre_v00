@@ -1,0 +1,6 @@
+@Sucre_RandomValue_HostAddress = http://localhost:5190
+
+GET {{Sucre_RandomValue_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

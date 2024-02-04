@@ -1,0 +1,53 @@
+﻿@model Sucre_Models.AppUserLoginM
+@{
+    ViewData["Title"] = "Application user log in";
+}
+
+<div class="container">
+    <h1>Log in</h1>
+    <div class="row">
+        <div class="col-md-4">
+            <section>
+                <form method="post" enctype="multipart/form-data" asp-controller="AppUser" asp-action="AppUserLogin">
+                    <h4>Use a local account to log in</h4><hr />
+                    <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                    <input hidden asp-for="ReturnUrl" />
+                    <div class="row form-floating py-1">
+                        @Html.TextBoxFor(model => model.Email, null, new{@class="form-control", type="text", @id="forEmail"})
+                        @Html.LabelFor(model => model.Email, "Email", new{@for="forEmail"})
+                        @Html.ValidationMessageFor(model => model.Email, null, new{@class="text-danger"})
+                    </div>
+                    <div class="row form-floating py-1">
+                        <input asp-for="Password" type="password" class="form-control" id="forPassw" />
+                        <label asp-for="Password" for="forPassw"></label>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="row form-group py-1">
+                        <input type="submit" class="btn btn-success W-100" value="Log in" />                        
+                    </div>                    
+                    <div class="form-group py-1">
+                        <p>
+                            @* <a asp-action="AppUserRegister" class="btn btn-info btn-sm w-100">Register as a new user</a> *@
+                            <a asp-action="AppUserRegister" class="link-primary w-100">Register as a new user?</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+         <div class="col-md-6 offset-md-2">
+            @*    <section>
+               
+                <h4>Use another service to log in.</h4><hr />
+                <div>
+                    <p>
+                        There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
+                        for details on setting up this ASP.NET application to support logging in via external services.
+                    </p>
+                </div>
+            </section> *@
+        </div>
+    </div>
+</div>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

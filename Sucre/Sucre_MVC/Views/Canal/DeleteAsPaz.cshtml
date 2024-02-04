@@ -1,0 +1,68 @@
+﻿@model Sucre_Models.AsPazCanalM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Canal.AsPaz - Remove";
+}
+
+<div class="container">
+    <form method="post" asp-action="DeleteAsPaz" enctype="multipart/form-data">
+        <input asp-for="AsPazM.Id" hidden>        
+        <input asp-for="AsPazM.CanalId" hidden>        
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">                
+                <h2 class="text-primary-custom pl-3">Remove AsPaz (@Model.AsPazM.Id.ToString()) for Canal: @Model.CanalName (@Model.AsPazM.CanalId.ToString())</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="CanalName"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="CanalName" class="form-control" disabled />                                
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="AsPazM.High"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="AsPazM.High" class="form-control" disabled></input>
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                <label asp-for="AsPazM.Low"></label>
+                            </div>
+                            <div class="col-8">
+                                <input asp-for="AsPazM.Low" class="form-control" disabled />
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        <input type="submit" class="btn btn-danger w-100" value="Remove" />                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="IndexAsPaz" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

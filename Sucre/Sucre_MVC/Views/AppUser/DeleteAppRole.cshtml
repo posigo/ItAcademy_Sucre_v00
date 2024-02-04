@@ -1,0 +1,88 @@
+﻿@*@model Sucre_Models.ParameterTypeM*@
+@model Sucre_Models.AppRoleM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "AppRole - Remove";
+}
+
+<div class="container">
+    <form method="post" asp-action="DeleteAppRole" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.Id)
+        @*<input asp-for="@Model.Id" hidden>        *@
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">Remove App Role (@Model.Id.ToString())</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.Name, null, new{@class="form-control", @type="text", @id="Name", @disabled="disabled"})
+                            @Html.LabelFor(model => model.Name, "Role name", new{@for="Name"})                            
+                        </div>
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.Value, null, new{@class="form-control", @type="text", @id="Value", @disabled="disabled"})
+                            @Html.LabelFor(model => model.Value, "Role value", new{@for="Value"})
+                        </div>
+                       
+@*
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Name, null, null)
+                                 <label asp-for="Name"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Name, null, new{@class="form-control", @readonly="readonly"})
+                                 <input asp-for="Name" class="form-control" disabled />                                 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.Mnemo, null, null)
+                                 <label asp-for="Mnemo"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.Mnemo, null, new{@class="form-control", @readonly="readonly"})
+                                 <input asp-for="Mnemo" class="form-control" disabled />                                 
+                            </div>
+                        </div>
+                        <div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.UnitMeas, null, null)
+                                 <label asp-for="UnitMeas"></label> 
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.UnitMeas, null, new{@class="form-control", @readonly="readonly"})
+                                 <input asp-for="UnitMeas" class="form-control" disabled />                                 
+                            </div>
+                        </div>
+*@
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        <input type="submit" class="btn btn-danger w-100" value="Remove" />                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="ListAppRole" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

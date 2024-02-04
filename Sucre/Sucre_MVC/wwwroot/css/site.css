@@ -1,0 +1,56 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+/*----------------------------------------*/
+.box-shadow {
+    box-shadow: 0.25rem 0.75rem rgba(0,0,0,.05)
+}
+
+.btn-primary-custom2 {
+    color: #fff;
+    background-color: #14518E;
+    border-color: #0A7BEB;
+}
+
+.btn-primary-custom {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;   
+}
+    .btn-primary-custom:hover {    
+        background-color: #1F88F0;
+    }
+
+.btn-danger-custom {
+        color: #fff;
+        background-color: #b5252f;
+        border-color: #b2121f;
+}
+    .btn-danger-custom:hover,
+    .btn-danger-custom:focus {
+        background-color: #f9303e;
+    }
+
+.text-primary-custom {
+    color: #1b6ec2;
+}

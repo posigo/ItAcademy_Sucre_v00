@@ -1,0 +1,17 @@
+﻿@{
+    var DisplayOfEmptyList = "";
+    if (ViewData["DisplayOfEmptyList"] != null && ViewData["DisplayOfEmptyList"].ToString().Trim() != "")
+    {
+        DisplayOfEmptyList = ViewData["DisplayOfEmptyList"].ToString();
+    }
+    else
+    {
+        DisplayOfEmptyList = "The inscription is empty";
+    }
+
+}
+
+<div class="row pt-4 m-0 alert alert-danger" role="alert">
+    <p class="text-danger h4">@DisplayOfEmptyList</p>
+</div>
+

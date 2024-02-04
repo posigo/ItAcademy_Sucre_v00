@@ -1,0 +1,70 @@
+﻿@model IEnumerable<EnergyM>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Energies - Index";
+    ViewData["DisplayOfEmptyList"] = "The list of energy types is empty!";
+    ViewData["HeaderTable"] = new Dictionary<string, string>()
+    {
+       {"Head","List of types of Energy"},
+       {"Controller","Energy"},
+       {"Action","Upsert"},
+       {"Caption","Add a type of energy"}
+    };
+}
+
+<div class="container p-3 bg-white">
+   @*  <div class="row pt-4 m-0 alert alert-primary">
+        <div class="col-6 col-sm-4 col-md-6 col-lg-8">
+            <h2 class="text-primary">List of types of Energy</h2>
+        </div>
+        <div class="col-6 col-sm-8 col-md-6 col-lg-4  text-end">
+            <a asp-controller="Energy" asp-action="Upsert" class="btn btn-primary-custom">
+                Add a type of energy
+            </a>            
+        </div>
+    </div> *@
+
+    @{
+        await Html.RenderPartialAsync("_DisplayHeaderIndex", ViewData["HeaderTable"]);
+    }
+
+    @if (Model.Count()>0)
+    {
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 m-0 p-0 alert alert-light table-responsive table-responsive-sm table-responsive-md table-responsive-lg">
+            <table class="table table-secondary table-bordered table-striped table-hover" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Type of energy</th>
+                        <th></th>
+                    </tr>                
+                </thead>
+                <tbody>
+                    @foreach (var obj in Model)
+                    {
+                        <tr>
+                            <td width="10%">@obj.Id</td>
+                            <td width="70%">@obj.EnergyName</td>
+                            <td class="text-center">
+                                <a asp-controller="Energy" asp-action="Upsert" asp-route-Id="@obj.Id" class="btn btn-primary-custom mx-2">
+                                    Edit
+                                </a>
+                                <a asp-controller="Energy" asp-action="Delete" asp-route-Id="@obj.Id" class="btn btn-danger-custom mx-2">
+                                    Delete
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>        
+    }   
+    else
+    {
+        @* <div class="alert alert-danger" role="alert">
+            <p class="text-danger h4">The list of energy types is empty!</p>
+        </div> *@
+        @*<partial name="_DisplayOfEmptyList" view-data="ViewData" />*@
+        await Html.RenderPartialAsync("_DisplayOfEmptyList", ViewData["DisplayOfEmptyList"]);
+    }
+</div>

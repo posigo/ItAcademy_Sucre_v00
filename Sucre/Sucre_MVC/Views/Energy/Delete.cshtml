@@ -1,0 +1,61 @@
+﻿@model Sucre_Models.EnergyM
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Energy - Remove";
+}
+
+<div class="container">
+    <form method="post" asp-action="Delete" enctype="multipart/form-data">
+        @Html.HiddenFor(model => model.Id)
+        @* <input asp-for="@Model.Id" hidden>         *@
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">Remove Energy Type (@Model.Id.ToString())</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.EnergyName,null, new{@class="form-control", @type="text", @id="EnergyName", @disabled="disabled"})                            
+                            @Html.LabelFor(model => model.EnergyName, "Type of energy environment", new{@for="EnergyName"})
+                        </div>
+                        @*<div class="row py-2">
+                            <div class="col-4">
+                                @Html.LabelFor(model => model.EnergyName, "Type of energy environment", null)
+                                <label asp-for="EnergyName"></label>
+                            </div>
+                            <div class="col-8">
+                                @Html.TextBoxFor(model => model.EnergyName,null, new{@class="form-control", @readonly="readonly"})
+                                <input asp-for="EnergyName" class="form-control" disabled />                                
+                            </div>
+                        </div>*@     
+                        
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        <input type="submit" class="btn btn-danger w-100" value="Remove" />                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

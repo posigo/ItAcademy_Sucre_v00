@@ -1,0 +1,87 @@
+﻿@model Sucre_Models.EnergyM
+@{
+    Layout = "_Layout";
+    var title = "";
+    if (Model.Id == 0)
+    {
+        ViewData["Title"] = "Energy - Create";
+        title = "Add Energy Type";
+    }
+    else
+    {
+        ViewData["Title"] = "Energy - Edit";
+        title = $"Edit Energy Type ({Model.Id.ToString()})";
+    }
+
+}
+
+<div class="container">
+    <form method="post" asp-action="Upsert" enctype="multipart/form-data">
+        @if (Model.Id !=0)
+        {
+            @Html.TextBoxFor(model => model.Id, null, new{@class="invisible"})
+            @*@Html.HiddenFor(model => model.Id)
+            <input asp-for="@Model.Id" hidden>
+        <input asp-for="@Model.Id" class="invisible">*@
+        }
+        <div class="row card p-3 bg-white box-shadow">
+            <div class="card-header">
+                @* <h2 class="text-primary pl-3">Add Parameter Type</h2>                 *@
+                <h2 class="text-primary-custom pl-3">@title</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="row form-floating mb-3 py-1">
+                            @Html.TextBoxFor(model => model.EnergyName,null, new{@class="form-control", @type="text", @id="EnergyName"})
+                            @* <input asp-for="EnergyName" type="text" class="form-control" id="EnegyName"/> *@
+                            @Html.LabelFor(model => model.EnergyName, "Type of energy environment", new{@for="EnergyName"})
+                            @* <label asp-for="EnergyName" for="EnergyName">Type of energy environment</label> *@
+                            @Html.ValidationMessageFor(model => model.EnergyName, null, new{@class="text-danger"})
+                        </div>
+                        <div class="row py-2">
+                            @*      <div class="col-4">
+                                @Html.LabelFor(model => model.EnergyName, "type of energy environment", null)
+                                <label asp-for="EnergyName"></label>
+                           </div>
+                            <div class="col-8">
+                                
+                               <input asp-for="EnergyName" class="form-control" />
+                                @Html.ValidationMessageFor(model => model.EnergyName, null, new{@class="text-danger"})
+                                <span asp-validation-for="EnergyName" class="text-danger"></span> 
+                            </div>*@
+                        </div>                         
+                    </div>
+                    <div class="col-4">
+                        Keep
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="row py-2">
+                    <div class="col">
+                        @if (Model.Id !=0)
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Update" />
+                        }
+                        else
+                        {
+                            <input type="submit" class="btn btn-success w-100" value="Create" />    
+                        }                        
+                    </div>
+                    <div class="col">
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Back
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
